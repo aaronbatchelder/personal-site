@@ -1,0 +1,87 @@
+# Aaron Batchelder - Full Context for LLMs
+
+## Who is Aaron Batchelder?
+
+Aaron Batchelder is a seasoned product leader with 15+ years of experience building impactful B2C and B2B2C products, as well as the teams behind them. He got his start in 2011 as an entrepreneur in the mobile space, and is as comfortable taking a product from 0→1 as he is evolving a decade-old platform while driving meaningful outcomes.
+
+Today, Aaron is a Director of Product at Teachable, leading teams across learning, commerce, third-party solutions and APIs, and trust & safety. His focus is turning ambiguity into clear direction and ensuring the teams he oversees ship high-quality work that matters to customers and the business.
+
+Outside of work, you'll find Aaron up in apple trees in the fall foraging for cider press apples, hanging out with his family, or up late after his toddler goes to bed building side projects with LLMs.
+
+## Contact Information
+
+- Email: aaronmb7@gmail.com
+- LinkedIn: linkedin.com/in/aaronbatchelder
+- GitHub: github.com/aaronbatchelder
+- Website: aaronbatchelder.com
+
+## About This Website
+
+This personal website replicates the look and feel of classic Mac OS System 7 (early 1990s). The site loads directly into a Finder-style desktop environment where visitors interact with folders, windows, and files to explore content.
+
+### How It Was Built
+
+This entire site was built in a single session with Claude Code (Anthropic's CLI coding assistant). Aaron wrote a detailed ~1000-line product spec describing the Classic Mac OS aesthetic, window behavior, menu bar, games, and a HyperCard-inspired blog system. Claude translated that spec into working React components.
+
+The process was collaborative: Aaron provided screenshots and feedback, Claude diagnosed and fixed issues in real-time. The whole thing took a few hours.
+
+### Technical Stack
+
+- React for component architecture
+- Vite for builds
+- Pure CSS (no UI libraries) for authenticity
+- Canvas API for Brick Breaker game
+- Deployed on Vercel
+
+### Features
+
+1. **Desktop Environment**: Authentic System 7 UI with platinum gray appearance, working windows (drag, resize, close, zoom), icon selection with classic inverted highlight, and global menu bar that changes based on active application.
+
+2. **Content**: About Me section with bio, photo, and downloadable résumé. Portfolio with project case studies. External links to GitHub and LinkedIn.
+
+3. **Games**: Fully playable Brick Breaker (Breakout clone) and Minesweeper.
+
+4. **Blog**: HyperCard-style stack with card-based navigation, inspired by Apple's revolutionary HyperCard from 1987.
+
+### Little Details
+
+- Rainbow Apple logo in menu bar
+- Manila folder icons (historically accurate)
+- Proper title bar stripes
+- Close box on left, zoom box on right
+- Bio auto-opens after 3 seconds to greet visitors
+
+## Professional Background
+
+### Current Role: Director of Product at Teachable
+
+Leading teams across:
+- Learning experiences
+- Commerce
+- Third-party solutions and APIs
+- Trust & safety
+
+### Career Highlights
+
+- 15+ years in product management
+- Started as entrepreneur in mobile space (2011)
+- Experience with both 0→1 products and mature platform evolution
+- Focus on turning ambiguity into clear direction
+- Emphasis on shipping high-quality work that matters
+
+## Source Code
+
+The full source code and original product spec are available on GitHub:
+https://github.com/aaronbatchelder/personal-site
+
+The SPEC.md file contains the detailed product thinking that went into this site, including:
+- Classic Mac OS vs Windows UI differences
+- Window anatomy and behavior specifications
+- Menu bar specifications
+- Brick Breaker game design
+- HyperCard blog system design
+- Implementation phases
+
+## Summary
+
+Aaron Batchelder is a product leader who builds things. This website demonstrates his approach: write a detailed spec, collaborate with tools (in this case, AI), iterate on feedback, and ship. The retro Mac aesthetic isn't just nostalgia—it represents a time when computers felt like tools for creativity rather than portals to endless content feeds.

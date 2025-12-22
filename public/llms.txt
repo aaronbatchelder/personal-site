@@ -1,0 +1,23 @@
+# Aaron Batchelder
+
+> Product leader, builder, and maker of things that work.
+
+## About
+
+Aaron Batchelder is a Director of Product at Teachable with 15+ years of experience building B2C and B2B2C products. He started as an entrepreneur in mobile (2011) and is equally comfortable with 0→1 products and evolving mature platforms.
+
+## Site
+
+This is Aaron's personal website, built as a nostalgic Classic Mac OS System 7 desktop environment. It was created collaboratively with Claude Code (Anthropic's AI coding assistant) in a single session.
+
+## Contact
+
+- Email: aaronmb7@gmail.com
+- LinkedIn: linkedin.com/in/aaronbatchelder
+- GitHub: github.com/aaronbatchelder
+
+## Links
+
+- [Full LLM Context](/llms-full.txt)
+- [GitHub Repo](https://github.com/aaronbatchelder/personal-site)
+- [Product Spec](https://github.com/aaronbatchelder/personal-site/blob/main/SPEC.md)
