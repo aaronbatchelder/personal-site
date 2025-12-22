@@ -1,0 +1,229 @@
+/* Brick Breaker Game Styles */
+
+.game-window .window-content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mac-black);
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: var(--mac-white);
+  border-bottom: 1px solid var(--mac-black);
+  font-family: var(--font-chicago);
+  font-size: 12px;
+}
+
+.game-stats {
+  display: flex;
+  gap: 24px;
+}
+
+.game-stat {
+  display: flex;
+  gap: 8px;
+}
+
+.game-stat-label {
+  color: var(--mac-gray-dark);
+}
+
+.game-stat-value {
+  font-weight: bold;
+}
+
+.game-lives {
+  display: flex;
+  gap: 4px;
+}
+
+.game-life {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--mac-black);
+}
+
+.game-life.lost {
+  background-color: var(--mac-gray-light);
+  border: 1px solid var(--mac-gray-mid);
+}
+
+.game-canvas-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.game-canvas {
+  background-color: var(--mac-white);
+  border: 2px solid var(--mac-gray-dark);
+}
+
+.game-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.game-overlay-text {
+  font-family: var(--font-chicago);
+  font-size: 24px;
+  color: var(--mac-white);
+  text-shadow: 2px 2px 0 var(--mac-black);
+}
+
+.game-overlay-subtext {
+  font-family: var(--font-geneva);
+  font-size: 14px;
+  color: var(--mac-gray-light);
+}
+
+.game-button {
+  font-family: var(--font-chicago);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 24px;
+  background-color: var(--mac-white);
+  border: 2px solid var(--mac-black);
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.game-button:hover {
+  background-color: var(--mac-gray-light);
+}
+
+.game-button:active {
+  transform: translate(1px, 1px);
+}
+
+/* ===== Minesweeper Styles ===== */
+
+.minesweeper-window .window-content {
+  padding: 0;
+  background-color: var(--mac-platinum);
+}
+
+.minesweeper-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+}
+
+.minesweeper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 200px;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  background-color: var(--mac-gray-light);
+  border: 2px inset var(--mac-white);
+}
+
+.minesweeper-counter {
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f00;
+  background-color: #000;
+  padding: 2px 6px;
+  min-width: 45px;
+  text-align: center;
+}
+
+.minesweeper-face {
+  font-size: 20px;
+  width: 32px;
+  height: 32px;
+  border: 2px outset var(--mac-white);
+  background-color: var(--mac-gray-light);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.minesweeper-face:active {
+  border-style: inset;
+}
+
+.minesweeper-board {
+  display: flex;
+  flex-direction: column;
+  border: 3px inset var(--mac-gray-dark);
+  background-color: var(--mac-gray-light);
+}
+
+.minesweeper-row {
+  display: flex;
+}
+
+.minesweeper-cell {
+  width: 20px;
+  height: 20px;
+  border: 2px outset var(--mac-white);
+  background-color: var(--mac-gray-light);
+  font-family: var(--font-chicago);
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.minesweeper-cell:active:not(:disabled):not(.revealed) {
+  border-style: inset;
+}
+
+.minesweeper-cell.revealed {
+  border: 1px solid var(--mac-gray-mid);
+  background-color: var(--mac-gray-light);
+  cursor: default;
+}
+
+.minesweeper-cell.mine {
+  background-color: #f00;
+}
+
+.minesweeper-cell.flagged {
+  font-size: 14px;
+}
+
+/* Number colors */
+.minesweeper-cell.n1 { color: #0000ff; }
+.minesweeper-cell.n2 { color: #008000; }
+.minesweeper-cell.n3 { color: #ff0000; }
+.minesweeper-cell.n4 { color: #000080; }
+.minesweeper-cell.n5 { color: #800000; }
+.minesweeper-cell.n6 { color: #008080; }
+.minesweeper-cell.n7 { color: #000000; }
+.minesweeper-cell.n8 { color: #808080; }
+
+.minesweeper-message {
+  margin-top: 12px;
+  font-family: var(--font-chicago);
+  font-size: 14px;
+  font-weight: bold;
+}

@@ -1,0 +1,272 @@
+/* Finder Window Specific Styles */
+
+.finder-window .window-content {
+  background-color: var(--mac-white);
+}
+
+/* Finder item (files/folders in grid) */
+.finder-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 72px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.finder-item:hover .finder-item-label {
+  text-decoration: underline;
+}
+
+.finder-item.selected .finder-item-icon {
+  filter: invert(1);
+}
+
+.finder-item.selected .finder-item-label {
+  background-color: var(--mac-black);
+  color: var(--mac-white);
+}
+
+.finder-item-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 4px;
+  image-rendering: pixelated;
+}
+
+.finder-item-label {
+  font-family: var(--font-geneva);
+  font-size: 12px;
+  text-align: center;
+  padding: 1px 4px;
+  max-width: 72px;
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+
+/* SimpleText viewer */
+.simpletext-window .window-content {
+  padding: 16px;
+  font-family: var(--font-geneva);
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.simpletext-window h1 {
+  font-family: var(--font-chicago);
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.simpletext-window h2 {
+  font-family: var(--font-chicago);
+  font-size: 12px;
+  font-weight: bold;
+  margin: 16px 0 8px 0;
+}
+
+.simpletext-window p {
+  margin-bottom: 12px;
+}
+
+.simpletext-window ul {
+  margin-left: 16px;
+  margin-bottom: 12px;
+}
+
+.simpletext-window li {
+  margin-bottom: 4px;
+}
+
+/* Picture viewer */
+.picture-window .window-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: var(--mac-gray-light);
+}
+
+.picture-window img {
+  max-width: 100%;
+  max-height: 100%;
+  border: 1px solid var(--mac-black);
+  background-color: var(--mac-white);
+}
+
+/* Form window */
+.form-window .window-content {
+  padding: 24px;
+}
+
+.mac-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mac-form label {
+  font-family: var(--font-chicago);
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.mac-form input[type="text"],
+.mac-form input[type="email"] {
+  width: 100%;
+  padding: 4px 8px;
+  border: 1px solid var(--mac-black);
+  background-color: var(--mac-white);
+  font-family: var(--font-geneva);
+  font-size: 12px;
+  box-shadow: inset 1px 1px 0 var(--mac-gray-light);
+}
+
+.mac-form input:focus {
+  outline: none;
+  box-shadow: inset 1px 1px 0 var(--mac-gray-light), 0 0 0 2px var(--mac-black);
+}
+
+.mac-button {
+  font-family: var(--font-chicago);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 16px;
+  background-color: var(--mac-white);
+  border: 2px solid var(--mac-black);
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 1px 1px 0 var(--mac-black);
+}
+
+.mac-button:hover {
+  background-color: var(--mac-gray-light);
+}
+
+.mac-button:active {
+  box-shadow: none;
+  transform: translate(1px, 1px);
+}
+
+.mac-button.primary {
+  border-width: 3px;
+}
+
+/* ===== Contact Window Styles ===== */
+
+.contact-window .window-content {
+  padding: 0;
+  background-color: var(--mac-white);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.contact-field {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--mac-gray-light);
+}
+
+.contact-field-message {
+  flex: 1;
+  align-items: flex-start;
+  flex-direction: column;
+  border-bottom: none;
+}
+
+.contact-label {
+  font-family: var(--font-chicago);
+  font-size: 12px;
+  font-weight: bold;
+  width: 60px;
+  flex-shrink: 0;
+}
+
+.contact-field-message .contact-label {
+  margin-bottom: 6px;
+}
+
+.contact-static {
+  font-family: var(--font-geneva);
+  font-size: 12px;
+  color: var(--mac-gray-dark);
+  flex: 1;
+}
+
+.contact-input {
+  flex: 1;
+  padding: 4px 8px;
+  border: 1px solid var(--mac-black);
+  background-color: var(--mac-white);
+  font-family: var(--font-geneva);
+  font-size: 12px;
+  box-shadow: inset 1px 1px 0 var(--mac-gray-light);
+}
+
+.contact-input:focus {
+  outline: none;
+  box-shadow: inset 1px 1px 0 var(--mac-gray-light), 0 0 0 1px var(--mac-black);
+}
+
+.contact-textarea {
+  width: 100%;
+  flex: 1;
+  min-height: 120px;
+  padding: 8px;
+  border: 1px solid var(--mac-black);
+  background-color: var(--mac-white);
+  font-family: var(--font-geneva);
+  font-size: 12px;
+  resize: none;
+  box-shadow: inset 1px 1px 0 var(--mac-gray-light);
+}
+
+.contact-textarea:focus {
+  outline: none;
+  box-shadow: inset 1px 1px 0 var(--mac-gray-light), 0 0 0 1px var(--mac-black);
+}
+
+.contact-actions {
+  padding: 12px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--mac-gray-light);
+  background-color: var(--mac-platinum);
+}
+
+.contact-sent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 32px;
+  text-align: center;
+}
+
+.contact-sent-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.contact-sent-title {
+  font-family: var(--font-chicago);
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.contact-sent-message {
+  font-family: var(--font-geneva);
+  font-size: 12px;
+  color: var(--mac-gray-dark);
+}

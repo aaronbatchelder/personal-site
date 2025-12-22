@@ -1,0 +1,202 @@
+/* Window Styles - Classic Mac OS System 7 */
+
+.window {
+  position: absolute;
+  background-color: var(--mac-white);
+  border: 1px solid var(--mac-black);
+  box-shadow: 1px 1px 0 var(--mac-black);
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  min-height: 100px;
+}
+
+.window.active {
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Title Bar */
+.window-title-bar {
+  height: 20px;
+  background-color: var(--mac-white);
+  border-bottom: 1px solid var(--mac-black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  cursor: grab;
+  position: relative;
+}
+
+.window-title-bar:active {
+  cursor: grabbing;
+}
+
+/* Title bar stripes for active window - tighter horizontal lines */
+.window.active .window-title-bar {
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--mac-white) 0px,
+    var(--mac-white) 1px,
+    var(--mac-black) 1px,
+    var(--mac-black) 2px
+  );
+}
+
+/* Inactive window - no stripes, just white */
+.window:not(.active) .window-title-bar {
+  background-color: var(--mac-white);
+}
+
+/* Close box - left side, flush to edge */
+.window-close-box {
+  width: 13px;
+  height: 11px;
+  background-color: var(--mac-white);
+  border: 1px solid var(--mac-black);
+  cursor: pointer;
+  flex-shrink: 0;
+  z-index: 1;
+  margin: 3px 0 3px 4px;
+}
+
+.window-close-box:hover {
+  background-color: var(--mac-gray-light);
+}
+
+.window-close-box:active {
+  background-color: var(--mac-black);
+}
+
+/* Window title - center */
+.window-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-chicago);
+  font-size: 12px;
+  font-weight: bold;
+  background-color: var(--mac-white);
+  padding: 0 8px;
+  white-space: nowrap;
+  line-height: 20px;
+}
+
+/* Zoom box - right side, flush to edge */
+.window-zoom-box {
+  width: 13px;
+  height: 11px;
+  background-color: var(--mac-white);
+  border: 1px solid var(--mac-black);
+  cursor: pointer;
+  flex-shrink: 0;
+  z-index: 1;
+  position: relative;
+  margin: 3px 4px 3px 0;
+}
+
+/* Inner box for zoom icon */
+.window-zoom-box::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 6px;
+  height: 4px;
+  border: 1px solid var(--mac-black);
+  background-color: var(--mac-white);
+}
+
+.window-zoom-box:hover {
+  background-color: var(--mac-gray-light);
+}
+
+.window-zoom-box:hover::after {
+  background-color: var(--mac-gray-light);
+}
+
+/* Window content area */
+.window-content {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+  background-color: var(--mac-white);
+}
+
+/* Finder window header bar */
+.finder-header {
+  height: 20px;
+  background-color: var(--mac-white);
+  border-bottom: 1px solid var(--mac-gray-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  font-family: var(--font-geneva);
+  font-size: 10px;
+  color: var(--mac-gray-dark);
+}
+
+/* Finder icon grid */
+.finder-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+  align-content: flex-start;
+}
+
+/* Window resize handle - bottom right */
+.window-resize-handle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  cursor: nwse-resize;
+  background: linear-gradient(
+    135deg,
+    transparent 50%,
+    var(--mac-gray-mid) 50%,
+    var(--mac-gray-mid) 60%,
+    transparent 60%,
+    transparent 70%,
+    var(--mac-gray-mid) 70%,
+    var(--mac-gray-mid) 80%,
+    transparent 80%
+  );
+}
+
+/* Scrollbar styling */
+.window-content::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+.window-content::-webkit-scrollbar-track {
+  background-color: var(--mac-scrollbar-bg);
+  border-left: 1px solid var(--mac-black);
+}
+
+.window-content::-webkit-scrollbar-thumb {
+  background-color: var(--mac-white);
+  border: 1px solid var(--mac-black);
+}
+
+.window-content::-webkit-scrollbar-button {
+  background-color: var(--mac-white);
+  border: 1px solid var(--mac-black);
+  height: 16px;
+  width: 16px;
+}
+
+/* WindowShade collapsed state */
+.window.shaded .window-content,
+.window.shaded .finder-header,
+.window.shaded .window-resize-handle {
+  display: none;
+}
+
+.window.shaded {
+  min-height: auto;
+}

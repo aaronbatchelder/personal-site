@@ -1,0 +1,67 @@
+/* Classic Mac OS System 7 Theme */
+:root {
+  /* System 7 Platinum appearance */
+  --mac-white: #ffffff;
+  --mac-platinum: #dddddd;
+  --mac-gray-light: #cccccc;
+  --mac-gray-mid: #999999;
+  --mac-gray-dark: #666666;
+  --mac-black: #000000;
+
+  /* Accent colors */
+  --mac-highlight: #000000;
+  --mac-title-active: #000000;
+  --mac-title-inactive: #999999;
+
+  /* Window colors */
+  --mac-window-bg: #ffffff;
+  --mac-window-border: #000000;
+  --mac-scrollbar-bg: #dddddd;
+
+  /* Fonts */
+  --font-chicago: 'ChicagoFLF', 'Geneva', 'Helvetica Neue', sans-serif;
+  --font-geneva: 'Geneva', 'Helvetica Neue', sans-serif;
+  --font-monaco: 'Monaco', 'Courier New', monospace;
+
+  /* Sizing */
+  --menu-bar-height: 20px;
+  --icon-size: 32px;
+  --icon-spacing: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-geneva);
+  font-size: 12px;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  cursor: default;
+  user-select: none;
+}
+
+/* Chicago font styling for titles/menus */
+.chicago {
+  font-family: var(--font-chicago);
+  font-weight: bold;
+}
+
+/* Geneva for body text */
+.geneva {
+  font-family: var(--font-geneva);
+}
+
+/* Monaco for code/monospace */
+.monaco {
+  font-family: var(--font-monaco);
+}

@@ -1,0 +1,111 @@
+/* Menu Bar Styles - Classic Mac OS */
+
+.menu-bar {
+  height: var(--menu-bar-height);
+  background-color: var(--mac-white);
+  border-bottom: 1px solid var(--mac-black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  font-family: var(--font-chicago);
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  z-index: 10000;
+}
+
+.menu-bar-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.menu-bar-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-right: 8px;
+}
+
+.menu-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background-color: var(--mac-black);
+  color: var(--mac-white);
+}
+
+.menu-item.apple-menu {
+  padding: 0 8px;
+}
+
+.apple-logo {
+  font-size: 14px;
+}
+
+.application-name {
+  font-family: var(--font-chicago);
+  font-weight: bold;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--mac-white);
+  border: 1px solid var(--mac-black);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+  min-width: 180px;
+  z-index: 10001;
+}
+
+.dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 16px;
+  cursor: pointer;
+  font-family: var(--font-chicago);
+  font-size: 12px;
+  font-weight: normal;
+  color: var(--mac-black);
+  background-color: var(--mac-white);
+}
+
+.dropdown-item:hover:not(.disabled):not(.divider) {
+  background-color: var(--mac-black);
+  color: var(--mac-white);
+}
+
+.dropdown-item.disabled {
+  color: var(--mac-gray-mid);
+  cursor: default;
+}
+
+.dropdown-item.divider {
+  height: 1px;
+  background-color: var(--mac-gray-mid);
+  margin: 4px 16px;
+  padding: 0;
+  cursor: default;
+}
+
+.dropdown-item .shortcut {
+  margin-left: 24px;
+  font-family: var(--font-geneva);
+}
+
+.dropdown-item.checked::before {
+  content: '✓';
+  position: absolute;
+  left: 4px;
+}

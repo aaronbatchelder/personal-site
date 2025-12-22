@@ -1,0 +1,79 @@
+/* Mac-style Alert Dialog */
+
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20000;
+}
+
+.alert-dialog {
+  background-color: var(--mac-white);
+  border: 2px solid var(--mac-black);
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+  min-width: 300px;
+  max-width: 400px;
+  padding: 16px 20px;
+}
+
+.alert-content {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.alert-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.alert-message {
+  font-family: var(--font-geneva);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.alert-title {
+  font-family: var(--font-chicago);
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.alert-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.alert-button {
+  font-family: var(--font-chicago);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 20px;
+  background-color: var(--mac-white);
+  border: 1px solid var(--mac-black);
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.alert-button:hover {
+  background-color: var(--mac-gray-light);
+}
+
+.alert-button:active {
+  background-color: var(--mac-gray-mid);
+}
+
+.alert-button.primary {
+  border-width: 3px;
+  box-shadow: 0 0 0 1px var(--mac-black);
+}
