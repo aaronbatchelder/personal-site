@@ -3,7 +3,6 @@
 export const fileSystem = {
   desktop: [
     { id: 'about-me', name: 'About Me', type: 'folder' },
-    { id: 'portfolio', name: 'My Portfolio', type: 'folder' },
     { id: 'github', name: 'GitHub', type: 'alias', url: 'https://github.com/aaronbatchelder' },
     { id: 'linkedin', name: 'LinkedIn', type: 'alias', url: 'https://linkedin.com/in/aaronbatchelder' },
     { id: 'games', name: 'Games', type: 'folder' },
