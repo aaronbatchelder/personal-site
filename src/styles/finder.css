@@ -60,6 +60,16 @@
   margin-bottom: 16px;
 }
 
+.simpletext-link {
+  color: var(--mac-black);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.simpletext-link:hover {
+  color: var(--mac-gray-dark);
+}
+
 .simpletext-window h2 {
   font-family: var(--font-chicago);
   font-size: 12px;
