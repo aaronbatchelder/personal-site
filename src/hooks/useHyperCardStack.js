@@ -7,12 +7,20 @@ export const CARD_TYPES = {
   POST: 'post',
 };
 
-export function useHyperCardStack(posts = []) {
+export function useHyperCardStack(posts = [], initialPostId = null) {
+  // Determine initial card state based on initialPostId
+  const getInitialCard = () => {
+    if (initialPostId && posts.length > 0) {
+      const postIndex = posts.findIndex(p => p.id === initialPostId);
+      if (postIndex !== -1) {
+        return { type: CARD_TYPES.POST, postIndex };
+      }
+    }
+    return { type: CARD_TYPES.HOME, postIndex: null };
+  };
+
   // Current card state
-  const [currentCard, setCurrentCard] = useState({
-    type: CARD_TYPES.HOME,
-    postIndex: null, // Only used when type is POST
-  });
+  const [currentCard, setCurrentCard] = useState(getInitialCard);
 
   // Navigation history for back functionality
   const [history, setHistory] = useState([]);

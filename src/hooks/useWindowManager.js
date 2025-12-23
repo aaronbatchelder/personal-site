@@ -27,6 +27,7 @@ export function useWindowManager() {
         zIndex: maxZ + 1,
         content: windowConfig.content || null,
         folderId: windowConfig.folderId || null,
+        initialPostId: windowConfig.initialPostId || null,
       };
 
       return [...prev, newWindow];

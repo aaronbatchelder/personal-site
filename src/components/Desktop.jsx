@@ -34,8 +34,30 @@ export function Desktop() {
   const [showAbout, setShowAbout] = useState(false);
   const [externalLinkAlert, setExternalLinkAlert] = useState(null);
   const [hasShownBio, setHasShownBio] = useState(false);
+  const [hasHandledDeepLink, setHasHandledDeepLink] = useState(false);
 
-  // Auto-popup bio after 3 seconds
+  // Handle deep links (e.g., #blog or #blog/post-id)
+  useEffect(() => {
+    if (hasHandledDeepLink) return;
+
+    const hash = window.location.hash;
+    if (hash.startsWith('#blog')) {
+      const postId = hash.replace('#blog/', '').replace('#blog', '') || null;
+      openWindow({
+        type: 'hypercard',
+        title: "Aaron's Blog",
+        size: { width: 550, height: 650 },
+        initialPostId: postId || null,
+      });
+      setHasShownBio(true); // Don't show bio if coming from deep link
+      setHasHandledDeepLink(true);
+      return;
+    }
+
+    setHasHandledDeepLink(true);
+  }, [hasHandledDeepLink, openWindow]);
+
+  // Auto-popup bio after 3 seconds (only if no deep link)
   useEffect(() => {
     if (hasShownBio) return;
 
@@ -288,6 +310,7 @@ export function Desktop() {
           <HyperCardWindow
             key={win.id}
             windowProps={windowProps}
+            initialPostId={win.initialPostId}
           />
         );
 

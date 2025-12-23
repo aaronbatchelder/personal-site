@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Window } from '../Window';
 import { HomeCard } from './HomeCard';
 import { IndexCard } from './IndexCard';
@@ -6,7 +7,7 @@ import { CardNavigation } from './CardNavigation';
 import { useHyperCardStack, CARD_TYPES } from '../../hooks/useHyperCardStack';
 import { blogPosts } from '../../content/blogPosts';
 
-export function HyperCardWindow({ windowProps }) {
+export function HyperCardWindow({ windowProps, initialPostId }) {
   const {
     currentCard,
     goHome,
@@ -20,7 +21,7 @@ export function HyperCardWindow({ windowProps }) {
     canGoNext,
     canGoPrev,
     posts,
-  } = useHyperCardStack(blogPosts);
+  } = useHyperCardStack(blogPosts, initialPostId);
 
   const renderCard = () => {
     switch (currentCard.type) {
