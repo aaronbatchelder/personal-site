@@ -10,16 +10,16 @@ A personal website that replicates the look and feel of classic Mac OS System 7 
 
 ## The Story
 
-This entire site was built in a single session with [Claude Code](https://claude.ai/code) (Anthropic's CLI coding assistant). I wrote a detailed spec document describing what I wanted—a nostalgic System 7 Mac experience—and Claude built it from scratch.
+This entire site was built in a single session with [Claude Code](https://claude.ai/code) (Anthropic's CLI coding assistant). I wrote a light spec document describing what I wanted - a nostalgic System 7 Mac experience—and Claude built it from scratch.
 
 ### The Process
 
-1. **I wrote the spec** - A ~1000-line product spec describing the Classic Mac OS aesthetic, window behavior, menu bar, games, and a HyperCard-inspired blog system
-2. **Claude built it** - Component by component, from the desktop environment to a working Brick Breaker game
+1. **I wrote the spec** - A light product spec describing the Classic Mac OS aesthetic, window behavior, menu bar, games, and a HyperCard-inspired blog system
+2. **Collaborated with Claude to build it** - Component by component, from the desktop environment to a working Brick Breaker game
 3. **We iterated** - I provided screenshots and feedback ("the folder icons should be manila, not yellow", "the menu dropdown text is invisible"), and Claude fixed issues in real-time
-4. **Shipped** - Pushed to GitHub and deployed to Vercel, all from the CLI
+4. **Shipped** - Pushed to GitHub and deployed to Vercel
 
-The whole thing took a few hours of collaborative work.
+The whole thing took about 6 hours of collaborative work.
 
 ## Features
 
@@ -59,18 +59,6 @@ The whole thing took a few hours of collaborative work.
 
 No external component libraries. Everything built from scratch to match the System 7 aesthetic.
 
-## The Spec
-
-The original product spec I wrote is in this repo: it covers everything from the difference between Mac and Windows UI conventions to the exact CSS variables for the platinum color scheme. If you're curious about the level of detail that went into this, check it out.
-
-Key sections:
-- Classic Mac OS vs Windows differences
-- Window anatomy and behavior
-- Menu bar specification
-- Brick Breaker game design
-- HyperCard blog system (card types, navigation, visual style)
-- Implementation phases
-
 ## Running Locally
 
 ```bash
@@ -94,11 +82,9 @@ This site is deployed on [Vercel](https://vercel.com) with automatic deploys fro
 
 ## What I Learned
 
-Building with an AI coding assistant is genuinely collaborative. The spec I wrote wasn't code—it was product thinking: user interactions, visual design, edge cases. Claude translated that into working React components.
+While AI is incredible at 0->1 creation, it occured to me through this project just how vital open source projects/libraries/frameworks are for creating beautiful AI driven experiences. Whether that's for the Classic MacOS look, or the Tailwind CSS framework, LLMs having access to these resources has been such an unlock for engineering relatively consistent and balanced experiences that all of us benefit from today.
 
-When things didn't look right (menu text invisible, windows opening behind each other, icons overlapping), I just took a screenshot and described the problem. Claude diagnosed and fixed issues I would have spent much longer debugging myself.
-
-This is the future of building personal projects: focus on *what* you want, iterate on the details, ship fast.
+Additionally, this was one of the first "pixel" focused projects I've done in a while. I've gone for function over form many times while learning vibe coding. While it's not perfect, it was genuinely fun to iterate with Claude Code to get to the desired outcome. 
 
 ## Credits
 
