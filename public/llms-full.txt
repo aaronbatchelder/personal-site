@@ -2,7 +2,7 @@
 
 ## Who is Aaron Batchelder?
 
-Aaron Batchelder is a seasoned product leader with 15+ years of experience building impactful B2C and B2B2C products, as well as the teams behind them. He got his start in 2011 as an entrepreneur in the mobile space, and is as comfortable taking a product from 0→1 as he is evolving a decade-old platform while driving meaningful outcomes.
+Aaron Batchelder is a seasoned product leader with 13+ years of experience building impactful B2C and B2B2C products, as well as the teams behind them. He got his start in 2011 as an entrepreneur in the mobile space, and is as comfortable taking a product from 0→1 as he is evolving a decade-old platform while driving meaningful outcomes.
 
 Today, Aaron is a Director of Product at Teachable, leading teams across learning, commerce, third-party solutions and APIs, and trust & safety. His focus is turning ambiguity into clear direction and ensuring the teams he oversees ship high-quality work that matters to customers and the business.
 
@@ -63,7 +63,7 @@ Leading teams across:
 
 ### Career Highlights
 
-- 15+ years in product management
+- 13+ years in product management
 - Started as entrepreneur in mobile space (2011)
 - Experience with both 0→1 products and mature platform evolution
 - Focus on turning ambiguity into clear direction
