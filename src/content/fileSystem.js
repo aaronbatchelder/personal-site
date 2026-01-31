@@ -71,11 +71,11 @@ export const fileSystem = {
       title: 'Bio',
       content: `Hi there 👋! I'm Aaron Batchelder. Thanks for stopping by—feel free to say hi! Oh, and don't forget to check out the Games folder before you leave. There are a few classics in there.
 
-By nature, I'm a pure builder—and a seasoned product leader with 13+ years of experience building impactful B2C and B2B2C products, as well as the teams behind them. I got my start in 2011 as an entrepreneur in the mobile space, and I'm as comfortable taking a product from 0→1 as I am evolving a decade-old platform while driving meaningful outcomes.
+By nature, I'm a builder - and a product leader with 13+ years shipping B2C and B2B2C products. I got my start in 2011 as an entrepreneur in mobile (7M+ downloads, exited), and I'm as comfortable taking a product from 0→1 as I am evolving a mature platform and growing the teams that ship them.
 
-Today, I'm a Director of Product at Teachable, leading teams across learning, commerce, third-party solutions and APIs, and trust & safety. My focus is turning ambiguity into clear direction and ensuring the teams I oversee ship high-quality work that matters to customers and the business.
+Today, I'm Director of Product at Teachable, a creator economy platform that's powered $2B+ in sales. I lead 6 pods across commerce, learning experience, trust & safety, developer experience, APIs & integrations, core services, and mobile. My focus is turning ambiguity into clear direction and ensuring teams ship work that actually matters.
 
-Outside of work, you'll find me up in apple trees in the fall foraging for cider press apples, hanging out with my family, or up late after my toddler goes to bed building side projects with my llama friends (LLMs).`
+I stay closer to the craft than most product leaders. I build tools myself, regularly prototype and experiment with AI, and train teams to do the same.`
     },
 
     resume: {
