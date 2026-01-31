@@ -75,7 +75,11 @@ By nature, I'm a builder - and a product leader with 13+ years shipping B2C and 
 
 Today, I'm Director of Product at Teachable, a creator economy platform that's powered $2B+ in sales. I lead 6 pods across commerce, learning experience, trust & safety, developer experience, APIs & integrations, core services, and mobile. My focus is turning ambiguity into clear direction and ensuring teams ship work that actually matters.
 
-I stay closer to the craft than most product leaders. I build tools myself, regularly prototype and experiment with AI, and train teams to do the same.`
+I stay closer to the craft than most product leaders. I build tools myself, regularly prototype and experiment with AI, and train teams to do the same.
+
+Outside of work, you'll find me foraging wild apples in the fall, hanging with my family, or up late after my toddler goes to bed building side projects with my llama friends (LLMs).
+
+Feel free to reach out any time at aaronmb7@gmail.com.`
     },
 
     resume: {
