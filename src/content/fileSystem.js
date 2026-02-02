@@ -69,7 +69,7 @@ export const fileSystem = {
   documents: {
     bio: {
       title: 'Bio',
-      content: `Hi there 👋! I'm Aaron Batchelder. Thanks for stopping by—feel free to say hi! Oh, and don't forget to check out the Games folder before you leave. There are a few classics in there.
+      content: `Hi there 👋! I'm Aaron Batchelder. Thanks for stopping by and feel free to say hi! Oh, and don't forget to check out the Games folder before you leave. There are a few classics in there.
 
 By nature, I'm a builder - and a product leader with 13+ years shipping B2C and B2B2C products. I got my start in 2011 as an entrepreneur in mobile (7M+ downloads, exited), and I'm as comfortable taking a product from 0→1 as I am evolving a mature platform and growing the teams that ship them.
 
