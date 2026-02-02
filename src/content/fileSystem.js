@@ -26,8 +26,8 @@ export const fileSystem = {
         { id: 'project-3', name: 'Project Three', type: 'document', content: 'project3' },
       ]
     },
-    'github': {
-      name: 'GitHub Projects',
+    'projects': {
+      name: 'Projects',
       items: [
         { id: 'repo-1', name: 'Repo One', type: 'alias', url: 'https://github.com/aaronbatchelder' },
         { id: 'repo-2', name: 'Repo Two', type: 'alias', url: 'https://github.com/aaronbatchelder' },
@@ -55,7 +55,7 @@ export const fileSystem = {
       items: [
         { id: 'about-me-alias', name: 'About Me', type: 'folder-alias', target: 'about-me' },
         { id: 'portfolio-alias', name: 'My Portfolio', type: 'folder-alias', target: 'portfolio' },
-        { id: 'github-alias', name: 'GitHub Projects', type: 'folder-alias', target: 'github' },
+        { id: 'projects-alias', name: 'Projects', type: 'folder-alias', target: 'projects' },
         { id: 'subscribe-alias', name: 'Subscribe', type: 'folder-alias', target: 'subscribe' },
         { id: 'games-alias', name: 'Games', type: 'folder-alias', target: 'games' },
       ]
