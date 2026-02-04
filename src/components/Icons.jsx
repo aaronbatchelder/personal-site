@@ -157,6 +157,25 @@ export const HyperCardIcon = () => (
   </svg>
 );
 
+export const SnakeIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Grid background */}
+    <rect x="4" y="4" width="24" height="24" fill="#FFF" stroke="#000" strokeWidth="1"/>
+    {/* Snake body */}
+    <rect x="6" y="14" width="6" height="6" fill="#333" stroke="#000" strokeWidth="0.5"/>
+    <rect x="12" y="14" width="6" height="6" fill="#333" stroke="#000" strokeWidth="0.5"/>
+    <rect x="18" y="14" width="6" height="6" fill="#333" stroke="#000" strokeWidth="0.5"/>
+    <rect x="18" y="8" width="6" height="6" fill="#333" stroke="#000" strokeWidth="0.5"/>
+    {/* Snake head */}
+    <rect x="6" y="8" width="6" height="6" fill="#000" stroke="#000" strokeWidth="0.5"/>
+    {/* Eyes */}
+    <circle cx="8" cy="10" r="1" fill="#FFF"/>
+    <circle cx="10" cy="10" r="1" fill="#FFF"/>
+    {/* Food */}
+    <circle cx="9" cy="23" r="3" fill="#666"/>
+  </svg>
+);
+
 // Rainbow Apple logo - the iconic 6-color Apple
 export const AppleLogo = () => (
   <svg width="14" height="17" viewBox="0 0 14 17" xmlns="http://www.w3.org/2000/svg">
