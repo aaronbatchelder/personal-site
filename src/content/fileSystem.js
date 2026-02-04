@@ -46,6 +46,7 @@ export const fileSystem = {
       items: [
         { id: 'brick-breaker', name: 'Brick Breaker', type: 'game' },
         { id: 'minesweeper', name: 'Minesweeper', type: 'minesweeper' },
+        { id: 'snake', name: 'Snake', type: 'snake' },
         { id: 'high-scores', name: 'High Scores', type: 'document', content: 'highScores' },
         { id: 'game-readme', name: 'Read Me', type: 'document', content: 'gameReadme' },
       ]

@@ -7,6 +7,7 @@ import { PictureWindow } from './PictureWindow';
 import { SubscribeWindow } from './SubscribeWindow';
 import { GameWindow } from './game/GameWindow';
 import { MinesweeperWindow } from './game/MinesweeperWindow';
+import { SnakeWindow } from './game/SnakeWindow';
 import { ContactWindow } from './ContactWindow';
 import { HyperCardWindow } from './hypercard/HyperCardWindow';
 import { AlertDialog } from './AlertDialog';
@@ -80,6 +81,7 @@ export function Desktop() {
     const activeWindow = windows.find(w => w.id === activeWindowId);
     if (activeWindow?.type === 'game') return 'Brick Breaker';
     if (activeWindow?.type === 'minesweeper') return 'Minesweeper';
+    if (activeWindow?.type === 'snake') return 'Snake';
     if (activeWindow?.type === 'contact') return 'Mail';
     if (activeWindow?.type === 'simpletext') return 'SimpleText';
     if (activeWindow?.type === 'hypercard') return 'HyperCard';
@@ -195,6 +197,14 @@ export function Desktop() {
         });
         break;
 
+      case 'snake':
+        openWindow({
+          type: 'snake',
+          title: 'Snake',
+          size: { width: 436, height: 500 },
+        });
+        break;
+
       default:
         console.log('Unknown item type:', item.type);
     }
@@ -292,6 +302,14 @@ export function Desktop() {
       case 'minesweeper':
         return (
           <MinesweeperWindow
+            key={win.id}
+            windowProps={windowProps}
+          />
+        );
+
+      case 'snake':
+        return (
+          <SnakeWindow
             key={win.id}
             windowProps={windowProps}
           />
