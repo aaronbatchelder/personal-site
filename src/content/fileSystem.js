@@ -3,7 +3,8 @@
 export const fileSystem = {
   desktop: [
     { id: 'about-me', name: 'About Me', type: 'folder' },
-    { id: 'projects', name: 'Projects', type: 'alias', url: 'https://github.com/aaronbatchelder' },
+    { id: 'projects', name: 'Projects', type: 'folder' },
+    { id: 'github', name: 'GitHub', type: 'alias', url: 'https://github.com/aaronbatchelder' },
     { id: 'linkedin', name: 'LinkedIn', type: 'alias', url: 'https://linkedin.com/in/aaronbatchelder' },
     { id: 'games', name: 'Games', type: 'folder' },
   ],
@@ -29,9 +30,9 @@ export const fileSystem = {
     'projects': {
       name: 'Projects',
       items: [
-        { id: 'repo-1', name: 'Repo One', type: 'alias', url: 'https://github.com/aaronbatchelder' },
-        { id: 'repo-2', name: 'Repo Two', type: 'alias', url: 'https://github.com/aaronbatchelder' },
-        { id: 'github-readme', name: 'Read Me', type: 'document', content: 'githubReadme' },
+        { id: 'probablynotsmart', name: 'probablynotsmart.ai', type: 'alias', url: 'https://probablynotsmart.ai' },
+        { id: 'letsprotoflow', name: 'letsprotoflow.com', type: 'alias', url: 'https://letsprotoflow.com' },
+        { id: 'productcasestudies', name: 'productcasestudies.com', type: 'alias', url: 'https://productcasestudies.com' },
       ]
     },
     'subscribe': {
