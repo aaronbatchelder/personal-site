@@ -8,6 +8,7 @@ import './styles/alert.css';
 import './styles/game.css';
 import './styles/hypercard.css';
 import './styles/blog-reader.css';
+import './styles/about-me.css';
 
 function App() {
   return <Desktop />;

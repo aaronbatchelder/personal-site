@@ -10,6 +10,7 @@ import { MinesweeperWindow } from './game/MinesweeperWindow';
 import { SnakeWindow } from './game/SnakeWindow';
 import { ContactWindow } from './ContactWindow';
 import { BlogReaderWindow } from './BlogReaderWindow';
+import { AboutMeWindow } from './AboutMeWindow';
 import { AlertDialog } from './AlertDialog';
 import { useWindowManager } from '../hooks/useWindowManager';
 import { fileSystem } from '../content/fileSystem';
@@ -57,23 +58,6 @@ export function Desktop() {
     setHasHandledDeepLink(true);
   }, [hasHandledDeepLink, openWindow]);
 
-  // Auto-popup bio after 3 seconds (only if no deep link)
-  useEffect(() => {
-    if (hasShownBio) return;
-
-    const timer = setTimeout(() => {
-      const bioDoc = fileSystem.documents.bio;
-      openWindow({
-        type: 'simpletext',
-        title: bioDoc.title,
-        content: bioDoc,
-        size: { width: 450, height: 400 },
-      });
-      setHasShownBio(true);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, [hasShownBio, openWindow]);
 
   const getActiveApp = useCallback(() => {
     if (!activeWindowId) return 'Finder';
@@ -84,6 +68,7 @@ export function Desktop() {
     if (activeWindow?.type === 'contact') return 'Mail';
     if (activeWindow?.type === 'simpletext') return 'SimpleText';
     if (activeWindow?.type === 'blog') return 'Blog Reader';
+    if (activeWindow?.type === 'about') return 'About Me';
     return 'Finder';
   }, [activeWindowId, windows]);
 
@@ -107,6 +92,21 @@ export function Desktop() {
       type: 'blog',
       title: "Aaron's Blog",
       size: { width: 650, height: 700 },
+    });
+  }, [windows, focusWindow, openWindow]);
+
+  const handleOpenAboutMe = useCallback(() => {
+    // Check if about me is already open
+    const existingWindow = windows.find(w => w.type === 'about');
+    if (existingWindow) {
+      focusWindow(existingWindow.id);
+      return;
+    }
+
+    openWindow({
+      type: 'about',
+      title: 'About Me',
+      size: { width: 500, height: 600 },
     });
   }, [windows, focusWindow, openWindow]);
 
@@ -328,6 +328,14 @@ export function Desktop() {
           />
         );
 
+      case 'about':
+        return (
+          <AboutMeWindow
+            key={win.id}
+            windowProps={windowProps}
+          />
+        );
+
       default:
         return null;
     }
@@ -360,6 +368,8 @@ export function Desktop() {
               onDoubleClick={() => {
                 if (item.type === 'alias') {
                   window.open(item.url, '_blank');
+                } else if (item.id === 'about-me') {
+                  handleOpenAboutMe();
                 } else {
                   handleOpenFolder(item.id, item.name);
                 }

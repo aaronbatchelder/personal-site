@@ -10,6 +10,22 @@ function updateUrlHash(postId) {
   }
 }
 
+// Copy current URL to clipboard
+function copyShareLink() {
+  const url = window.location.href;
+  navigator.clipboard.writeText(url).then(() => {
+    // Could add a toast notification here
+  }).catch(() => {
+    // Fallback for older browsers
+    const textArea = document.createElement('textarea');
+    textArea.value = url;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+  });
+}
+
 // Convert text with URLs and markdown links to HTML with anchor tags
 function linkify(text) {
   // First handle markdown-style links [text](url)
@@ -197,6 +213,14 @@ function PostList({ posts, onSelectPost, selectedPostId }) {
 }
 
 function PostView({ post, onBack }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleShare = () => {
+    copyShareLink();
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   if (!post) {
     return (
       <div className="blog-reader-content">
@@ -208,9 +232,14 @@ function PostView({ post, onBack }) {
   return (
     <div className="blog-reader-post-view">
       <div className="blog-reader-post-header">
-        <button className="blog-reader-back-btn" onClick={onBack}>
-          &larr; All Posts
-        </button>
+        <div className="blog-reader-header-nav">
+          <button className="blog-reader-back-btn" onClick={onBack}>
+            &larr; All Posts
+          </button>
+          <button className="blog-reader-share-btn" onClick={handleShare}>
+            {copied ? 'Copied!' : 'Share'}
+          </button>
+        </div>
         <div className="blog-reader-post-meta">
           <h1 className="blog-reader-post-title-large">{post.title}</h1>
           <span className="blog-reader-post-date-large">{post.date}</span>

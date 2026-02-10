@@ -99,6 +99,13 @@
   background-color: var(--mac-platinum);
 }
 
+.blog-reader-header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
 .blog-reader-back-btn {
   font-family: var(--font-geneva);
   font-size: 11px;
@@ -107,12 +114,30 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  margin-bottom: 8px;
 }
 
 .blog-reader-back-btn:hover {
   color: var(--mac-black);
   text-decoration: underline;
+}
+
+.blog-reader-share-btn {
+  font-family: var(--font-chicago);
+  font-size: 10px;
+  padding: 4px 10px;
+  background-color: var(--mac-white);
+  border: 1px solid var(--mac-black);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.blog-reader-share-btn:hover {
+  background-color: var(--mac-gray-light);
+}
+
+.blog-reader-share-btn:active {
+  background-color: var(--mac-gray-mid);
 }
 
 .blog-reader-post-meta {
@@ -331,6 +356,11 @@
   .blog-reader-back-btn {
     font-size: 14px;
     padding: 8px 0;
+  }
+
+  .blog-reader-share-btn {
+    font-size: 12px;
+    padding: 8px 16px;
   }
 
   /* Hide scrollbars on mobile */
