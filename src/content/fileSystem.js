@@ -15,7 +15,6 @@ export const fileSystem = {
       items: [
         { id: 'bio', name: 'Bio', type: 'document', content: 'bio' },
         { id: 'photo', name: 'Photo', type: 'picture', content: 'photo' },
-        { id: 'resume', name: 'Résumé', type: 'download', url: '/Aaron-Batchelder-Resume.pdf' },
         { id: 'contact', name: 'Contact', type: 'document', content: 'contact' },
       ]
     },
@@ -82,38 +81,6 @@ I stay closer to the craft than most product leaders. I build tools myself, regu
 Outside of work, you'll find me foraging wild apples in the fall, hanging with my family, or up late after my toddler goes to bed building side projects with my llama friends (LLMs).
 
 Feel free to reach out any time at aaronmb7@gmail.com.`
-    },
-
-    resume: {
-      title: 'Résumé',
-      content: `AARON BATCHELDER
-Product Manager
-
-EXPERIENCE
-
-Teachable (2020 - Present)
-Senior Product Manager
-• Led fraud prevention initiatives reducing chargebacks by 40%
-• Built automation tools saving 100+ hours/month
-• Managed cross-functional team of 8
-
-Previous Role (2015 - 2020)
-Product Manager
-• Shipped 12 major features
-• Grew user base by 3x
-• Led agile transformation
-
-SKILLS
-• Product Strategy
-• Data Analysis
-• User Research
-• Agile/Scrum
-• SQL, Python
-• Figma
-
-EDUCATION
-University Name
-Degree in Relevant Field`
     },
 
     contact: {
