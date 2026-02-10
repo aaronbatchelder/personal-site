@@ -3,7 +3,7 @@
 
 export const blogPosts = [
   {
-    id: 'probably-not-smart-part-1',
+    id: 'probably-not-smart-part',
     title: 'This is Probably Not Smart: I Gave 10 AI Agents $500 and a Landing Page',
     date: 'February 9, 2026',
     images: [
