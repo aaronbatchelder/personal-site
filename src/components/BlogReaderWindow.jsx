@@ -2,6 +2,35 @@ import { useState } from 'react';
 import { Window } from './Window';
 import { blogPosts } from '../content/blogPosts';
 
+// Convert text with URLs and markdown links to HTML with anchor tags
+function linkify(text) {
+  // First handle markdown-style links [text](url)
+  let result = text.replace(
+    /\[([^\]]+)\]\(([^)]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+  );
+
+  // Then handle bare URLs (but not ones already in href="...")
+  result = result.replace(
+    /(?<!href=["'])(?<!>)(https?:\/\/[^\s<]+)/g,
+    '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+  );
+
+  // Handle Twitter/X handles @username
+  result = result.replace(
+    /@([a-zA-Z0-9_]+)/g,
+    '<a href="https://twitter.com/$1" target="_blank" rel="noopener noreferrer">@$1</a>'
+  );
+
+  // Handle domain.com patterns (common domains without http)
+  result = result.replace(
+    /(?<![@/])(?<![a-zA-Z0-9])((?:probablynotsmart\.ai|github\.com\/[^\s<]+|twitter\.com\/[^\s<]+|linkedin\.com\/[^\s<]+))/gi,
+    '<a href="https://$1" target="_blank" rel="noopener noreferrer">$1</a>'
+  );
+
+  return result;
+}
+
 // Parse simple markdown-like content into renderable elements
 function parseContent(content, images) {
   if (!content) return null;
@@ -57,7 +86,7 @@ function parseContent(content, images) {
       elements.push(
         <ul key={`list-${i}`} className="blog-reader-list">
           {listItems.map((item, idx) => (
-            <li key={idx}>{item}</li>
+            <li key={idx} dangerouslySetInnerHTML={{ __html: linkify(item) }} />
           ))}
         </ul>
       );
@@ -74,7 +103,7 @@ function parseContent(content, images) {
       elements.push(
         <ol key={`olist-${i}`} className="blog-reader-list">
           {listItems.map((item, idx) => (
-            <li key={idx}>{item}</li>
+            <li key={idx} dangerouslySetInnerHTML={{ __html: linkify(item) }} />
           ))}
         </ol>
       );
@@ -118,10 +147,12 @@ function parseContent(content, images) {
       i++;
     }
 
-    // Parse inline formatting
-    const formattedParagraph = paragraph
-      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-      .replace(/\*([^*]+)\*/g, '<em>$1</em>');
+    // Parse inline formatting and links
+    const formattedParagraph = linkify(
+      paragraph
+        .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+    );
 
     elements.push(
       <p key={`p-${i}`} className="blog-reader-p" dangerouslySetInnerHTML={{ __html: formattedParagraph }} />
