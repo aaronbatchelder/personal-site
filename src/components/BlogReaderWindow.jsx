@@ -1,6 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Window } from './Window';
 import { blogPosts } from '../content/blogPosts';
+
+// Update URL hash for deep linking without triggering navigation
+function updateUrlHash(postId) {
+  const newHash = postId ? `#blog/${postId}` : '#blog';
+  if (window.location.hash !== newHash) {
+    window.history.replaceState(null, '', newHash);
+  }
+}
 
 // Convert text with URLs and markdown links to HTML with anchor tags
 function linkify(text) {
@@ -228,11 +236,26 @@ export function BlogReaderWindow({ windowProps, initialPostId }) {
   const handleSelectPost = (index) => {
     setSelectedPostIndex(index);
     setCurrentView('post');
+    // Update URL for deep linking
+    const post = blogPosts[index];
+    if (post) {
+      updateUrlHash(post.id);
+    }
   };
 
   const handleBack = () => {
     setCurrentView('list');
+    updateUrlHash(null);
   };
+
+  // Set initial URL hash when opening with a post
+  useEffect(() => {
+    if (currentView === 'post' && blogPosts[selectedPostIndex]) {
+      updateUrlHash(blogPosts[selectedPostIndex].id);
+    } else if (currentView === 'list') {
+      updateUrlHash(null);
+    }
+  }, []);
 
   const currentPost = blogPosts[selectedPostIndex];
 
