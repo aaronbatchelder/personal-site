@@ -173,16 +173,85 @@
   max-width: 100%;
 }
 
-/* Paragraphs */
+/* Paragraphs - standard HTML from marked */
+.blog-reader-post-content p {
+  margin: 0 0 16px 0;
+}
+
+.blog-reader-post-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Headers - standard HTML from marked */
+.blog-reader-post-content h1 {
+  font-family: var(--font-chicago);
+  font-size: 16px;
+  font-weight: bold;
+  margin: 28px 0 12px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--mac-gray-light);
+  letter-spacing: 0.5px;
+}
+
+.blog-reader-post-content h2 {
+  font-family: var(--font-chicago);
+  font-size: 14px;
+  font-weight: bold;
+  margin: 28px 0 12px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--mac-gray-light);
+  letter-spacing: 0.5px;
+}
+
+.blog-reader-post-content h1:first-child,
+.blog-reader-post-content h2:first-child {
+  margin-top: 0;
+}
+
+.blog-reader-post-content h3 {
+  font-family: var(--font-chicago);
+  font-size: 13px;
+  font-weight: bold;
+  margin: 20px 0 8px 0;
+}
+
+/* Lists - standard HTML from marked */
+.blog-reader-post-content ul,
+.blog-reader-post-content ol {
+  margin: 0 0 16px 0;
+  padding-left: 24px;
+}
+
+.blog-reader-post-content li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.blog-reader-post-content li:last-child {
+  margin-bottom: 0;
+}
+
+/* Blockquotes - standard HTML from marked */
+.blog-reader-post-content blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background-color: var(--mac-platinum);
+  border-left: 3px solid var(--mac-gray-dark);
+  font-style: italic;
+}
+
+/* Horizontal rule - standard HTML from marked */
+.blog-reader-post-content hr {
+  border: none;
+  border-top: 1px solid var(--mac-gray-light);
+  margin: 24px 0;
+}
+
+/* Legacy classes for backwards compatibility */
 .blog-reader-p {
   margin: 0 0 16px 0;
 }
 
-.blog-reader-p:last-child {
-  margin-bottom: 0;
-}
-
-/* Headers */
 .blog-reader-h2 {
   font-family: var(--font-chicago);
   font-size: 14px;
@@ -193,10 +262,6 @@
   letter-spacing: 0.5px;
 }
 
-.blog-reader-h2:first-child {
-  margin-top: 0;
-}
-
 .blog-reader-h3 {
   font-family: var(--font-chicago);
   font-size: 13px;
@@ -204,22 +269,11 @@
   margin: 20px 0 8px 0;
 }
 
-/* Lists */
 .blog-reader-list {
   margin: 0 0 16px 0;
   padding-left: 24px;
 }
 
-.blog-reader-list li {
-  margin-bottom: 8px;
-  line-height: 1.6;
-}
-
-.blog-reader-list li:last-child {
-  margin-bottom: 0;
-}
-
-/* Blockquotes */
 .blog-reader-quote {
   margin: 16px 0;
   padding: 12px 16px;
@@ -228,7 +282,6 @@
   font-style: italic;
 }
 
-/* Horizontal rule */
 .blog-reader-hr {
   border: none;
   border-top: 1px solid var(--mac-gray-light);
@@ -351,11 +404,15 @@
     line-height: 1.4;
   }
 
+  .blog-reader-post-content h1,
+  .blog-reader-post-content h2,
   .blog-reader-h2 {
     font-size: 15px;
     margin: 24px 0 10px 0;
   }
 
+  .blog-reader-post-content ul,
+  .blog-reader-post-content ol,
   .blog-reader-list {
     padding-left: 20px;
   }
