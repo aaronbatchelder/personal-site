@@ -38,8 +38,8 @@ function processContent(content, images) {
   let imageIndex = 0;
 
   // Convert ALL CAPS lines (section headers) to markdown h2 headers
-  // Match lines that are entirely uppercase letters, spaces, and basic punctuation
-  processed = processed.replace(/^([A-Z][A-Z\s,.'?!-]+)$/gm, (match) => {
+  // Match lines that are entirely uppercase letters, numbers, spaces, and basic punctuation
+  processed = processed.replace(/^([A-Z][A-Z0-9\s,.'?!-]+)$/gm, (match) => {
     // Only convert if it looks like a header (not a single word sentence)
     if (match.length > 3 && match === match.toUpperCase()) {
       return `## ${match}`;
