@@ -344,6 +344,13 @@ export function Desktop() {
       <div className="desktop-area" onClick={handleDesktopClick}>
         {/* Main desktop icons - left side */}
         <div className="desktop-icons">
+          {/* Blog - at the top */}
+          <DesktopIcon
+            variant="blog"
+            isSelected={selectedDesktopIcon === 'blog'}
+            onClick={() => setSelectedDesktopIcon('blog')}
+            onDoubleClick={handleOpenBlog}
+          />
           {fileSystem.desktop.map((item) => (
             <DesktopIcon
               key={item.id}
@@ -365,13 +372,6 @@ export function Desktop() {
             isSelected={selectedDesktopIcon === 'contact'}
             onClick={() => setSelectedDesktopIcon('contact')}
             onDoubleClick={handleOpenContact}
-          />
-          {/* Blog - HyperCard stack */}
-          <DesktopIcon
-            variant="blog"
-            isSelected={selectedDesktopIcon === 'blog'}
-            onClick={() => setSelectedDesktopIcon('blog')}
-            onDoubleClick={handleOpenBlog}
           />
         </div>
 
