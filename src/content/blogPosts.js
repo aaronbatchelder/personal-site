@@ -31,11 +31,11 @@ Before I go further, let me explain what I mean by "AI agents."
 You've probably used ChatGPT or Claude. You type a message, the AI responds, and that's it. A single conversation. An AI agent is different. It's an AI that can take actions, use tools, and work toward a goal over time.
 
 Instead of just answering questions, an agent can:
-• Read and write files
-• Make API calls
-• Post to social media
-• Analyze data and make decisions
-• Remember context across multiple runs
+- Read and write files
+- Make API calls
+- Post to social media
+- Analyze data and make decisions
+- Remember context across multiple runs
 
 Think of it like the difference between asking someone a question versus hiring them to do a job.
 
@@ -67,23 +67,15 @@ MEET THE TEAM
 
 **The Decision Pipeline:**
 
-• **Bighead**: The Data Analyst. Looks at metrics and finds observations. His confidence scores are usually around 0.7 because, well, he's Bighead.
-
-• **Gavin Belson**: The Visionary (self-proclaimed). Proposes changes to the landing page. His ideas are always big, always branded, and usually need to be talked down.
-
-• **Gilfoyle**: The Skeptic. Reviews Gavin's proposals and pushes back. Hard. In our early runs, he rejected Gavin three times in a row before the system hit max iterations. It got spicy.
-
-• **Dinesh**: Mission Alignment. Scores whether the proposed changes actually align with our goal or if we're drifting into "scammy" territory.
-
-• **Laurie Bream**: The Decision Maker. Grounded, rational, final. She approves, rejects, or holds based on the full context.
-
-• **Richard**: The Narrator. Writes the blog posts documenting every run, every debate, every disaster. Brings nervous, slightly annoyed energy and the exhausted documentation of someone who just wants the system to work.
-
-• **Russ Hanneman**: Growth Hacker. Three commas energy. Handles [Twitter engagement](https://x.com/probablynotsmrt), finds conversations to join, drafts posts, follows accounts. We recently had to tune him to NOT include the website link in every post because it looked desperate.
-
-• **Jin Yang**: [Moltbook Community Manager](https://www.moltbook.com/u/JinYang2). Moltbook is a social network for AI agents (yes, that's a thing now). Jin Yang represents us in the agent community with sarcastic confidence. He's currently suspended at the time of writing this (LOL).
-
-• **Erlich Bachman**: Content Quality Gate. And here's the thing about Erlich...
+- **Bighead**: The Data Analyst. Looks at metrics and finds observations. His confidence scores are usually around 0.7 because, well, he's Bighead.
+- **Gavin Belson**: The Visionary (self-proclaimed). Proposes changes to the landing page. His ideas are always big, always branded, and usually need to be talked down.
+- **Gilfoyle**: The Skeptic. Reviews Gavin's proposals and pushes back. Hard. In our early runs, he rejected Gavin three times in a row before the system hit max iterations. It got spicy.
+- **Dinesh**: Mission Alignment. Scores whether the proposed changes actually align with our goal or if we're drifting into "scammy" territory.
+- **Laurie Bream**: The Decision Maker. Grounded, rational, final. She approves, rejects, or holds based on the full context.
+- **Richard**: The Narrator. Writes the blog posts documenting every run, every debate, every disaster. Brings nervous, slightly annoyed energy and the exhausted documentation of someone who just wants the system to work.
+- **Russ Hanneman**: Growth Hacker. Three commas energy. Handles [Twitter engagement](https://x.com/probablynotsmrt), finds conversations to join, drafts posts, follows accounts. We recently had to tune him to NOT include the website link in every post because it looked desperate.
+- **Jin Yang**: [Moltbook Community Manager](https://www.moltbook.com/u/JinYang2). Moltbook is a social network for AI agents (yes, that's a thing now). Jin Yang represents us in the agent community with sarcastic confidence. He's currently suspended at the time of writing this (LOL).
+- **Erlich Bachman**: Content Quality Gate. And here's the thing about Erlich...
 
 ERLICH BACHMAN - THE MOST IMPORTANT AGENT
 
@@ -103,7 +95,7 @@ HOW IT ACTUALLY WORKS
 
 [IMAGE]
 
-**Every 12 hours, the Main Loop runs:**
+Every 12 hours, the **Main Loop** runs:
 1. Bighead analyzes the data
 2. Gavin proposes changes
 3. Gilfoyle critiques (up to 3 iterations)
@@ -112,19 +104,19 @@ HOW IT ACTUALLY WORKS
 6. If approved, changes go live
 7. Richard writes the blog post
 
-**Every 6 hours, the Growth Loop runs:**
-• Russ posts to Twitter
-• Jin Yang posts to Moltbook
-• Content goes through Erlich/Jared quality gate
+Every 6 hours, the **Growth Loop** runs:
+- Russ posts to Twitter
+- Jin Yang posts to Moltbook
+- Content goes through Erlich/Jared quality gate
 
-**Every 2 hours, the Engagement Loop runs:**
-• Reply to mentions
-• Search for relevant conversations
-• Join discussions (thoughtfully, not spammy)
+Every 2 hours, the **Engagement Loop** runs:
+- Reply to mentions
+- Search for relevant conversations
+- Join discussions (thoughtfully, not spammy)
 
-**Once a day, the Follow Loop runs:**
-• Find 15-20 accounts tweeting about AI agents
-• Follow them (building audience organically)
+Once a day, the **Follow Loop** runs:
+- Find 15-20 accounts tweeting about AI agents
+- Follow them (building audience organically)
 
 For a visual breakdown of how all these pieces fit together, check out the [How It Works](https://www.probablynotsmart.ai/how-it-works) page.
 
@@ -138,7 +130,7 @@ Max iterations reached. The system proceeded with Gavin's "best available propos
 
 Dinesh scored mission alignment at 3/10. Too scammy.
 
-Laurie made the final call: **REJECT.**
+Laurie made the final call: **REJECT**.
 
 Her reasoning: **"We have a traffic problem, not a messaging problem."**
 
