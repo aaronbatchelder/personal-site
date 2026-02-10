@@ -1,0 +1,271 @@
+/* Blog Reader Window Styles */
+/* Modern readable layout with retro Mac chrome */
+
+.blog-reader-window .window-content {
+  padding: 0;
+  background-color: var(--mac-white);
+}
+
+.blog-reader {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ===== List View ===== */
+
+.blog-reader-list-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-reader-list-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--mac-gray-light);
+  background-color: var(--mac-platinum);
+}
+
+.blog-reader-list-header h2 {
+  font-family: var(--font-chicago);
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.blog-reader-posts {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.blog-reader-empty {
+  padding: 32px 20px;
+  text-align: center;
+  font-family: var(--font-geneva);
+  font-size: 12px;
+  color: var(--mac-gray-dark);
+}
+
+.blog-reader-post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--mac-gray-light);
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.blog-reader-post-item:hover {
+  background-color: var(--mac-gray-light);
+}
+
+.blog-reader-post-item.selected {
+  background-color: var(--mac-black);
+  color: var(--mac-white);
+}
+
+.blog-reader-post-item .blog-reader-post-title {
+  font-family: var(--font-chicago);
+  font-size: 12px;
+  font-weight: bold;
+  flex: 1;
+  margin-right: 12px;
+}
+
+.blog-reader-post-item .blog-reader-post-date {
+  font-family: var(--font-geneva);
+  font-size: 10px;
+  color: var(--mac-gray-dark);
+  flex-shrink: 0;
+}
+
+.blog-reader-post-item.selected .blog-reader-post-date {
+  color: var(--mac-gray-light);
+}
+
+/* ===== Post View ===== */
+
+.blog-reader-post-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-reader-post-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--mac-gray-light);
+  background-color: var(--mac-platinum);
+}
+
+.blog-reader-back-btn {
+  font-family: var(--font-geneva);
+  font-size: 11px;
+  color: var(--mac-gray-dark);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.blog-reader-back-btn:hover {
+  color: var(--mac-black);
+  text-decoration: underline;
+}
+
+.blog-reader-post-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.blog-reader-post-title-large {
+  font-family: var(--font-chicago);
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.blog-reader-post-date-large {
+  font-family: var(--font-geneva);
+  font-size: 11px;
+  color: var(--mac-gray-dark);
+}
+
+/* ===== Post Content ===== */
+
+.blog-reader-post-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #1a1a1a;
+  max-width: 100%;
+}
+
+/* Paragraphs */
+.blog-reader-p {
+  margin: 0 0 16px 0;
+}
+
+.blog-reader-p:last-child {
+  margin-bottom: 0;
+}
+
+/* Headers */
+.blog-reader-h2 {
+  font-family: var(--font-chicago);
+  font-size: 14px;
+  font-weight: bold;
+  margin: 28px 0 12px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--mac-gray-light);
+  letter-spacing: 0.5px;
+}
+
+.blog-reader-h2:first-child {
+  margin-top: 0;
+}
+
+/* Lists */
+.blog-reader-list {
+  margin: 0 0 16px 0;
+  padding-left: 24px;
+}
+
+.blog-reader-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.blog-reader-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Blockquotes */
+.blog-reader-quote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background-color: var(--mac-platinum);
+  border-left: 3px solid var(--mac-gray-dark);
+  font-style: italic;
+}
+
+/* Horizontal rule */
+.blog-reader-hr {
+  border: none;
+  border-top: 1px solid var(--mac-gray-light);
+  margin: 24px 0;
+}
+
+/* Images in posts */
+.blog-reader-image {
+  max-width: 100%;
+  height: auto;
+  margin: 16px 0;
+  border: 1px solid var(--mac-gray-light);
+  border-radius: 4px;
+}
+
+/* Strong/Bold */
+.blog-reader-post-content strong {
+  font-weight: 600;
+}
+
+/* Emphasis/Italic */
+.blog-reader-post-content em {
+  font-style: italic;
+}
+
+/* Links in content */
+.blog-reader-post-content a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.blog-reader-post-content a:hover {
+  color: #004499;
+}
+
+/* Code styling */
+.blog-reader-post-content code {
+  font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+  font-size: 13px;
+  background-color: var(--mac-platinum);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* Scrollbar styling for blog content */
+.blog-reader-post-content::-webkit-scrollbar {
+  width: 16px;
+}
+
+.blog-reader-post-content::-webkit-scrollbar-track {
+  background: var(--mac-white);
+  border-left: 1px solid var(--mac-black);
+}
+
+.blog-reader-post-content::-webkit-scrollbar-thumb {
+  background: var(--mac-platinum);
+  border: 1px solid var(--mac-black);
+}
+
+.blog-reader-posts::-webkit-scrollbar {
+  width: 16px;
+}
+
+.blog-reader-posts::-webkit-scrollbar-track {
+  background: var(--mac-white);
+  border-left: 1px solid var(--mac-black);
+}
+
+.blog-reader-posts::-webkit-scrollbar-thumb {
+  background: var(--mac-platinum);
+  border: 1px solid var(--mac-black);
+}

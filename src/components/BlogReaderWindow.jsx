@@ -1,0 +1,223 @@
+import { useState } from 'react';
+import { Window } from './Window';
+import { blogPosts } from '../content/blogPosts';
+
+// Parse simple markdown-like content into renderable elements
+function parseContent(content, images) {
+  if (!content) return null;
+
+  const lines = content.split('\n');
+  const elements = [];
+  let i = 0;
+  let imageIndex = 0;
+
+  while (i < lines.length) {
+    const line = lines[i];
+
+    // Skip empty lines
+    if (!line.trim()) {
+      i++;
+      continue;
+    }
+
+    // Image placeholder [IMAGE]
+    if (line.trim() === '[IMAGE]') {
+      if (images && images[imageIndex]) {
+        elements.push(
+          <img
+            key={`img-${i}`}
+            src={images[imageIndex].src}
+            alt={images[imageIndex].alt || 'Blog image'}
+            className="blog-reader-image"
+          />
+        );
+        imageIndex++;
+      }
+      i++;
+      continue;
+    }
+
+    // Headers
+    if (line.startsWith('THE ') || line.startsWith('WHAT') || line.startsWith('HOW ') || line.startsWith('WHY ') || line.startsWith('MEET ')) {
+      // Section headers (all caps phrases)
+      elements.push(
+        <h2 key={i} className="blog-reader-h2">{line}</h2>
+      );
+      i++;
+      continue;
+    }
+
+    // Bullet points
+    if (line.startsWith('• ') || line.startsWith('- ')) {
+      const listItems = [];
+      while (i < lines.length && (lines[i].startsWith('• ') || lines[i].startsWith('- '))) {
+        listItems.push(lines[i].replace(/^[•-]\s*/, ''));
+        i++;
+      }
+      elements.push(
+        <ul key={`list-${i}`} className="blog-reader-list">
+          {listItems.map((item, idx) => (
+            <li key={idx}>{item}</li>
+          ))}
+        </ul>
+      );
+      continue;
+    }
+
+    // Numbered lists
+    if (/^\d+\.\s/.test(line)) {
+      const listItems = [];
+      while (i < lines.length && /^\d+\.\s/.test(lines[i])) {
+        listItems.push(lines[i].replace(/^\d+\.\s*/, ''));
+        i++;
+      }
+      elements.push(
+        <ol key={`olist-${i}`} className="blog-reader-list">
+          {listItems.map((item, idx) => (
+            <li key={idx}>{item}</li>
+          ))}
+        </ol>
+      );
+      continue;
+    }
+
+    // Horizontal rule
+    if (line.startsWith('---')) {
+      elements.push(<hr key={i} className="blog-reader-hr" />);
+      i++;
+      continue;
+    }
+
+    // Block quotes (lines starting with ")
+    if (line.startsWith('"') || line.startsWith('>')) {
+      elements.push(
+        <blockquote key={i} className="blog-reader-quote">
+          {line.replace(/^[">]\s*/, '')}
+        </blockquote>
+      );
+      i++;
+      continue;
+    }
+
+    // Regular paragraph - collect consecutive non-empty, non-special lines
+    let paragraph = line;
+    i++;
+    while (i < lines.length && lines[i].trim() &&
+           !lines[i].startsWith('• ') &&
+           !lines[i].startsWith('- ') &&
+           !lines[i].startsWith('THE ') &&
+           !lines[i].startsWith('WHAT') &&
+           !lines[i].startsWith('HOW ') &&
+           !lines[i].startsWith('WHY ') &&
+           !lines[i].startsWith('MEET ') &&
+           !lines[i].startsWith('---') &&
+           !lines[i].startsWith('"') &&
+           !lines[i].startsWith('[IMAGE]') &&
+           !/^\d+\.\s/.test(lines[i])) {
+      paragraph += ' ' + lines[i];
+      i++;
+    }
+
+    // Parse inline formatting
+    const formattedParagraph = paragraph
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*([^*]+)\*/g, '<em>$1</em>');
+
+    elements.push(
+      <p key={`p-${i}`} className="blog-reader-p" dangerouslySetInnerHTML={{ __html: formattedParagraph }} />
+    );
+  }
+
+  return elements;
+}
+
+function PostList({ posts, onSelectPost, selectedPostId }) {
+  return (
+    <div className="blog-reader-list-view">
+      <div className="blog-reader-list-header">
+        <h2>Posts</h2>
+      </div>
+      <div className="blog-reader-posts">
+        {posts.length === 0 ? (
+          <p className="blog-reader-empty">No posts yet. Check back soon!</p>
+        ) : (
+          posts.map((post, index) => (
+            <div
+              key={post.id}
+              className={`blog-reader-post-item ${selectedPostId === post.id ? 'selected' : ''}`}
+              onClick={() => onSelectPost(index)}
+            >
+              <span className="blog-reader-post-title">{post.title}</span>
+              <span className="blog-reader-post-date">{post.date}</span>
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  );
+}
+
+function PostView({ post, onBack }) {
+  if (!post) {
+    return (
+      <div className="blog-reader-content">
+        <p>Post not found.</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="blog-reader-post-view">
+      <div className="blog-reader-post-header">
+        <button className="blog-reader-back-btn" onClick={onBack}>
+          &larr; All Posts
+        </button>
+        <div className="blog-reader-post-meta">
+          <h1 className="blog-reader-post-title-large">{post.title}</h1>
+          <span className="blog-reader-post-date-large">{post.date}</span>
+        </div>
+      </div>
+      <div className="blog-reader-post-content">
+        {parseContent(post.content, post.images)}
+      </div>
+    </div>
+  );
+}
+
+export function BlogReaderWindow({ windowProps, initialPostId }) {
+  const [currentView, setCurrentView] = useState(initialPostId ? 'post' : 'list');
+  const [selectedPostIndex, setSelectedPostIndex] = useState(() => {
+    if (initialPostId) {
+      const index = blogPosts.findIndex(p => p.id === initialPostId);
+      return index >= 0 ? index : 0;
+    }
+    return 0;
+  });
+
+  const handleSelectPost = (index) => {
+    setSelectedPostIndex(index);
+    setCurrentView('post');
+  };
+
+  const handleBack = () => {
+    setCurrentView('list');
+  };
+
+  const currentPost = blogPosts[selectedPostIndex];
+
+  return (
+    <Window {...windowProps} className="blog-reader-window">
+      <div className="blog-reader">
+        {currentView === 'list' ? (
+          <PostList
+            posts={blogPosts}
+            onSelectPost={handleSelectPost}
+            selectedPostId={currentPost?.id}
+          />
+        ) : (
+          <PostView post={currentPost} onBack={handleBack} />
+        )}
+      </div>
+    </Window>
+  );
+}

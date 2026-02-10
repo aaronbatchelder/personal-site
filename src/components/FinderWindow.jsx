@@ -1,8 +1,13 @@
 import { Window } from './Window';
-import { FolderIcon, DocumentIcon, PictureIcon, AliasIcon, GameIcon, SubscribeIcon, MinesweeperIcon, SnakeIcon } from './Icons';
+import { FolderIcon, DocumentIcon, PictureIcon, AliasIcon, GameIcon, SubscribeIcon, MinesweeperIcon, SnakeIcon, ProbablyNotSmartIcon, ProtoflowIcon, ProductCaseStudiesIcon } from './Icons';
 
 function FinderItem({ item, isSelected, onClick, onDoubleClick }) {
   const getIcon = () => {
+    // Check for project-specific icons first
+    if (item.id === 'probablynotsmart') return <ProbablyNotSmartIcon />;
+    if (item.id === 'letsprotoflow') return <ProtoflowIcon />;
+    if (item.id === 'productcasestudies') return <ProductCaseStudiesIcon />;
+
     switch (item.type) {
       case 'folder':
       case 'folder-alias':

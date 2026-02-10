@@ -176,6 +176,55 @@ export const SnakeIcon = () => (
   </svg>
 );
 
+// Project-specific icons
+
+// Probably Not Smart - AI brain icon
+export const ProbablyNotSmartIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Document base */}
+    <path d="M6 2H20L26 8V30H6V2Z" fill="#FFF" stroke="#000" strokeWidth="1"/>
+    <path d="M20 2V8H26" fill="#EEE" stroke="#000" strokeWidth="1"/>
+    {/* Brain/AI symbol */}
+    <circle cx="16" cy="17" r="7" fill="#8B5CF6" stroke="#000" strokeWidth="1"/>
+    <path d="M12 17C12 14.5 13.5 13 16 13C18.5 13 20 14.5 20 17" stroke="#FFF" strokeWidth="1.5" fill="none"/>
+    <path d="M13 15C13 15 14 16 16 16C18 16 19 15 19 15" stroke="#FFF" strokeWidth="1" fill="none"/>
+    <circle cx="14" cy="18" r="1" fill="#FFF"/>
+    <circle cx="18" cy="18" r="1" fill="#FFF"/>
+    {/* Sparkles */}
+    <path d="M22 10L23 11L22 12L21 11Z" fill="#FFD700"/>
+    <path d="M10 8L11 9L10 10L9 9Z" fill="#FFD700"/>
+  </svg>
+);
+
+// Protoflow - flow/prototype icon
+export const ProtoflowIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Document base */}
+    <path d="M6 2H20L26 8V30H6V2Z" fill="#FFF" stroke="#000" strokeWidth="1"/>
+    <path d="M20 2V8H26" fill="#EEE" stroke="#000" strokeWidth="1"/>
+    {/* Flow diagram */}
+    <rect x="9" y="12" width="6" height="4" fill="#3B82F6" stroke="#000" strokeWidth="0.5"/>
+    <rect x="17" y="12" width="6" height="4" fill="#3B82F6" stroke="#000" strokeWidth="0.5"/>
+    <rect x="13" y="20" width="6" height="4" fill="#10B981" stroke="#000" strokeWidth="0.5"/>
+    {/* Arrows */}
+    <path d="M12 16L14 20" stroke="#000" strokeWidth="1"/>
+    <path d="M20 16L18 20" stroke="#000" strokeWidth="1"/>
+  </svg>
+);
+
+// Product Case Studies - document with chart icon
+export const ProductCaseStudiesIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Document base */}
+    <path d="M6 2H20L26 8V30H6V2Z" fill="#FFF" stroke="#000" strokeWidth="1"/>
+    <path d="M20 2V8H26" fill="#EEE" stroke="#000" strokeWidth="1"/>
+    {/* Bar chart */}
+    <rect x="9" y="20" width="4" height="6" fill="#F59E0B" stroke="#000" strokeWidth="0.5"/>
+    <rect x="14" y="16" width="4" height="10" fill="#EF4444" stroke="#000" strokeWidth="0.5"/>
+    <rect x="19" y="12" width="4" height="14" fill="#10B981" stroke="#000" strokeWidth="0.5"/>
+  </svg>
+);
+
 // Rainbow Apple logo - the iconic 6-color Apple
 export const AppleLogo = () => (
   <svg width="14" height="17" viewBox="0 0 14 17" xmlns="http://www.w3.org/2000/svg">

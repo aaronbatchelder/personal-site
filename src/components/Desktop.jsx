@@ -9,7 +9,7 @@ import { GameWindow } from './game/GameWindow';
 import { MinesweeperWindow } from './game/MinesweeperWindow';
 import { SnakeWindow } from './game/SnakeWindow';
 import { ContactWindow } from './ContactWindow';
-import { HyperCardWindow } from './hypercard/HyperCardWindow';
+import { BlogReaderWindow } from './BlogReaderWindow';
 import { AlertDialog } from './AlertDialog';
 import { useWindowManager } from '../hooks/useWindowManager';
 import { fileSystem } from '../content/fileSystem';
@@ -33,7 +33,6 @@ export function Desktop() {
   const [selectedDesktopIcon, setSelectedDesktopIcon] = useState(null);
   const [selectedFinderItems, setSelectedFinderItems] = useState({});
   const [showAbout, setShowAbout] = useState(false);
-  const [externalLinkAlert, setExternalLinkAlert] = useState(null);
   const [hasShownBio, setHasShownBio] = useState(false);
   const [hasHandledDeepLink, setHasHandledDeepLink] = useState(false);
 
@@ -45,9 +44,9 @@ export function Desktop() {
     if (hash.startsWith('#blog')) {
       const postId = hash.replace('#blog/', '').replace('#blog', '') || null;
       openWindow({
-        type: 'hypercard',
+        type: 'blog',
         title: "Aaron's Blog",
-        size: { width: 550, height: 650 },
+        size: { width: 650, height: 700 },
         initialPostId: postId || null,
       });
       setHasShownBio(true); // Don't show bio if coming from deep link
@@ -84,7 +83,7 @@ export function Desktop() {
     if (activeWindow?.type === 'snake') return 'Snake';
     if (activeWindow?.type === 'contact') return 'Mail';
     if (activeWindow?.type === 'simpletext') return 'SimpleText';
-    if (activeWindow?.type === 'hypercard') return 'HyperCard';
+    if (activeWindow?.type === 'blog') return 'Blog Reader';
     return 'Finder';
   }, [activeWindowId, windows]);
 
@@ -98,16 +97,16 @@ export function Desktop() {
 
   const handleOpenBlog = useCallback(() => {
     // Check if blog is already open
-    const existingWindow = windows.find(w => w.type === 'hypercard');
+    const existingWindow = windows.find(w => w.type === 'blog');
     if (existingWindow) {
       focusWindow(existingWindow.id);
       return;
     }
 
     openWindow({
-      type: 'hypercard',
+      type: 'blog',
       title: "Aaron's Blog",
-      size: { width: 550, height: 650 },
+      size: { width: 650, height: 700 },
     });
   }, [windows, focusWindow, openWindow]);
 
@@ -167,10 +166,7 @@ export function Desktop() {
       }
 
       case 'alias':
-        setExternalLinkAlert({
-          url: item.url,
-          name: item.name,
-        });
+        window.open(item.url, '_blank');
         break;
 
       case 'form':
@@ -323,9 +319,9 @@ export function Desktop() {
           />
         );
 
-      case 'hypercard':
+      case 'blog':
         return (
-          <HyperCardWindow
+          <BlogReaderWindow
             key={win.id}
             windowProps={windowProps}
             initialPostId={win.initialPostId}
@@ -356,7 +352,7 @@ export function Desktop() {
               onClick={() => setSelectedDesktopIcon(item.id)}
               onDoubleClick={() => {
                 if (item.type === 'alias') {
-                  setExternalLinkAlert({ url: item.url, name: item.name });
+                  window.open(item.url, '_blank');
                 } else {
                   handleOpenFolder(item.id, item.name);
                 }
@@ -415,21 +411,6 @@ export function Desktop() {
         />
       )}
 
-      {/* External link confirmation */}
-      {externalLinkAlert && (
-        <AlertDialog
-          icon="🌐"
-          title="External Link"
-          message={`You're about to visit ${externalLinkAlert.name}. This will open in a new tab.`}
-          primaryLabel="Continue"
-          secondaryLabel="Cancel"
-          onPrimary={() => {
-            window.open(externalLinkAlert.url, '_blank');
-            setExternalLinkAlert(null);
-          }}
-          onSecondary={() => setExternalLinkAlert(null)}
-        />
-      )}
     </div>
   );
 }

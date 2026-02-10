@@ -6,6 +6,10 @@ export const blogPosts = [
     id: 'probably-not-smart-part-1',
     title: 'This is Probably Not Smart: I Gave 10 AI Agents $500 and a Landing Page',
     date: 'February 9, 2026',
+    images: [
+      { src: '/images/blog/pns-main-loop.png', alt: 'Main optimization loop showing agent interactions' },
+      { src: '/images/blog/pns-run5-debate.png', alt: 'Run #5 showing the Gavin-Gilfoyle debate' },
+    ],
     content: `Part 1: The Experiment Begins
 
 THE QUESTION THAT WOULDN'T LEAVE ME ALONE
@@ -95,6 +99,8 @@ While the system has guardrails, Erlich, for better or worse, is the most import
 
 HOW IT ACTUALLY WORKS
 
+[IMAGE]
+
 Every 12 hours, the Main Loop runs:
 1. Bighead analyzes the data
 2. Gavin proposes changes
@@ -121,6 +127,8 @@ Once a day, the Follow Loop runs:
 THE FIRST REAL DEBATE
 
 In Run #5, I watched the agents have their first real disagreement.
+
+[IMAGE]
 
 Bighead found 6 observations with 0.7 confidence. Gavin proposed 3 changes focused on scarcity and urgency tactics. Gilfoyle pushed back: revise. Gavin tried again. Gilfoyle: reject. Third attempt. Gilfoyle: reject.
 
