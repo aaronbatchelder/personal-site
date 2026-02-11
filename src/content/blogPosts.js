@@ -28,7 +28,7 @@ THE PIVOTS
 
 **The web UI pivot:** I initially tried a web UI where users could input prompts, define variations, and track agent progress in a dashboard. Getting the terminal to communicate state back to a frontend was a mess. I still believe that's the right next step, but it wasn't the right first step. I knew I'd exclude many no/low-code users, but I wanted feedback on the concept before investing more.
 
-DESIGNING FOR TERMINAL (A FIRST FOR ME)
+## Designing for terminal
 
 This was my first time designing a terminal UX. I found it both fascinating and humbling. I knew that many PMs and designers (my target users) wouldn't be comfortable with GitHub and the command line.
 
