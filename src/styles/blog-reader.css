@@ -62,8 +62,7 @@
 }
 
 .blog-reader-post-item.selected {
-  background-color: var(--mac-black);
-  color: var(--mac-white);
+  background-color: var(--mac-gray-light);
 }
 
 .blog-reader-post-item .blog-reader-post-title {
@@ -82,7 +81,7 @@
 }
 
 .blog-reader-post-item.selected .blog-reader-post-date {
-  color: var(--mac-gray-light);
+  color: var(--mac-gray-dark);
 }
 
 /* ===== Post View ===== */
