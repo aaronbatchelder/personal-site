@@ -3,6 +3,82 @@
 
 export const blogPosts = [
   {
+    id: 'protoflow',
+    title: 'Building ProtoFlow: Parallel Prototyping with Claude Code',
+    date: 'February 10, 2026',
+    images: [
+      { src: '/images/blog/protoflow.gif', alt: 'ProtoFlow demo showing parallel Claude Code sessions' },
+      { src: '/images/blog/protoflow-side-by-side.png', alt: 'Two Claude Code sessions running side by side' },
+    ],
+    content: `Most AI workflows are still too linear. Using a single agent works well until you want to explore variants of an idea. Then everything slows down. You find yourself torn between approaches, unsure which to pursue first. Maybe you open multiple Claude Code sessions, copy context, tweak prompts. Or you run ideas sequentially, wasting time waiting and debating. After countless sessions with Claude Code, I wanted to build a better experience for early divergent prototyping.
+
+So I built [ProtoFlow](https://letsprotoflow.com).
+
+You give it one prompt, define a few variants, and it spins up multiple Claude Code sessions in parallel. Each explores a different direction. You compare the results side by side and decide which to continue. The whole thing took a few days to build, and yes, I used Claude to build a tool that orchestrates Claude.
+
+Before ProtoFlow, I'd pick one direction for a prototype, build it, and iterate, often scrapping the original approach entirely. Watching two variants come to life simultaneously, side by side, made the power of parallel exploration obvious.
+
+[IMAGE]
+
+THE PIVOTS
+
+**The pivot to prototyping:** I didn't set out to build ProtoFlow. The original name was "SplitRun" with a racing vibe - which agent finishes first? That didn't feel right though. It wasn't a race. The point is exploration, not speed. An agent taking 10 minutes longer doesn't mean it should "lose." I decided to focus on prototyping frontend experiences as the core use case I wanted to solve.
+
+**The tmux pivot:** I started with [tmux](https://www.redhat.com/en/blog/introduction-tmux-linux) to support Windows users. While tmux is powerful, the navigation felt clunky compared to native Terminal. So I stripped it back: terminal-only, Claude-only, focused on making the core flow smooth.
+
+**The web UI pivot:** I initially tried a web UI where users could input prompts, define variations, and track agent progress in a dashboard. Getting the terminal to communicate state back to a frontend was a mess. I still believe that's the right next step, but it wasn't the right first step. I knew I'd exclude many no/low-code users, but I wanted feedback on the concept before investing more.
+
+DESIGNING FOR TERMINAL (A FIRST FOR ME)
+
+This was my first time designing a terminal UX. I found it both fascinating and humbling. I knew that many PMs and designers (my target users) wouldn't be comfortable with GitHub and the command line.
+
+The installation process went through many iterations. Early on, it was multi-step, and I knew I'd lose people. I sent an early version to [Aaron Roy](https://aaronroy.com), who has sharp product instincts and excels at breaking early ideas. His findings confirmed my suspicions: installation was confusing, the tmux UI was hard to navigate, and setup felt harder than necessary. So I went back and simplified everything I could.
+
+MAKING THE SESSIONS FEEL SMOOTH
+
+To achieve a better UX, I created these guiding principles:
+
+1. Get as close to a one-command installation as possible
+2. Orient and guide the user through the prompt UX using simple and clear language
+3. Optimize for an "autopilot" vibe by minimizing Claude Code asking for permissions
+4. Automatically launch frontend experiences upon agent completion
+5. Make it easy to make a choice and continue iterating
+
+SIMPLIFYING THE UX
+
+The first hurdle: users didn't know what directory they were in before starting. So I added a "current directory" view with logic to either use the existing directory or create a new one.
+
+Next, the "autopilot experience." I enabled \`claude --dangerously-skip-permissions\` to minimize user interaction. The goal is to kick it off and watch, not babysit and approve actions you probably don't understand anyway.
+
+Then came the prompt injection. After several iterations, here's what happens behind the scenes.
+
+When you kick off a session, ProtoFlow creates git branches for each variant and assigns unique ports (only for frontend builds). *Note: I kept hitting port collisions with multiple sessions trying to spin up on the same port, nothing loading. Assigning unique ports at session start fixed it.*
+
+From there, it spins up Claude Code instances and injects your task with variant-specific constraints. The Terminal windows appear and Claude gets to work. No copy-pasting, no tab switching. Each agent starts building immediately.
+
+Getting this right took time. Early on, sessions were losing context of the initial prompt and variants. I wanted the handoff from orchestrator to agent to feel seamless. I think I got close.
+
+[IMAGE]
+
+THE CLAUDE COWORK CONNECTION
+
+Around the time I built this, Anthropic announced [Claude Cowork](https://www.anthropic.com/claude/cowork) - a desktop tool for non-developers to automate tasks. Many saw it as Anthropic's answer to Claude Code's accessibility problem. I'd been thinking about the same gap from a different angle with this project. Claude Code is powerful, but the average person isn't comfortable in the terminal. The accessibility problem is real, and bringing ProtoFlow to a web interface is the right next step.
+
+WHAT'S NEXT
+
+Building ProtoFlow got me thinking. Parallel agents exploring independently is useful - but what happens when agents work together instead of side by side? What if they could debate, critique each other, and converge on decisions?
+
+That question led to [probablynotsmart.ai](https://probablynotsmart.ai) - an autonomous AI marketing experiment. Ten AI agents with $500, full control of a landing page, ad spend, and social media. No human oversight. One agent analyzes, another proposes changes, another tears the proposal apart, another makes the final call. Every decision is documented publicly.
+
+ProtoFlow is divergent: explore many directions. Probablynotsmart is convergent: agents argue until they reach a decision, then execute. Two different slices of multi-agent work.
+
+---
+
+ProtoFlow is open source: [github.com/aaronbatchelder/protoflow](https://github.com/aaronbatchelder/protoflow)
+
+If you have Claude Code installed, you can run it in minutes. I'd love to see what you build.`
+  },
+  {
     id: 'probably-not-smart-part',
     title: 'This is Probably Not Smart: I Gave 10 AI Agents $500 and a Landing Page',
     date: 'February 9, 2026',
