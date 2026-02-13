@@ -3,6 +3,76 @@
 
 export const blogPosts = [
   {
+    id: 'ad-buyer-of-the-future',
+    title: 'The Ad Buyer of the Future Isn\'t Targeting You - It\'s Targeting Your Agent',
+    date: 'February 13, 2026',
+    images: [],
+    content: `Everyone's talking about OpenAI bringing ads into the chat experience. But there's a bigger question nobody's asking: what happens when ad platforms start targeting your *agent*?
+
+As AI agents take on more shopping, researching, and recommending, advertisers will need to influence not just humans, but the software acting on their behalf. And that changes everything.
+
+AGENTS DON'T HAVE EMOTIONS - NOT YET AT LEAST
+
+Today's ads are optimized for human psychology. We have emotions, impulse triggers, social proof biases, FOMO. Agents don't. They're focused on completing a task. They don't impulse buy. They don't care about your brand aesthetic.
+
+So how do you advertise to something that doesn't feel?
+
+You optimize for its decision-making logic.
+
+THREE SURFACES FOR REACHING AGENTS
+
+The engagement modalities for agents are fundamentally different from humans. Today's ads only operate in the first category below. But agents open up entirely new surfaces:
+
+1. **Browser-based UI:** The agent sees the page like a human would with banner ads, pop-ups, sponsored placements. Agents browsing the web will encounter these. But will they work?
+
+2. **Code and structured data:** Agents don't just see pages. They read source code, structured data, meta tags. LLM.txt files have made their way into the mainstream as a tactic to make pages more LLM friendly. However, what if there were "agent-targeted" metadata, and other signals that influence how an agent evaluates and ranks a product?
+
+3. **APIs:** This is the big one. Agents increasingly interact with services via APIs, not browsers. What does an "ad" look like in an API response? A sponsored result in a product search endpoint? A "recommended" flag on certain items? This is uncharted territory.
+
+THE BLACK JEANS TEST
+
+Here's a simple example of how UI-based advertising might play out with agents.
+
+A human gives an agent a task: buy a pair of black jeans online, between $50 and $70. The agent finds two options:
+
+1. A $90 pair, on sale for $65
+2. A $65 pair at full price
+
+Which does the agent choose?
+
+For humans, anchoring bias (showing the original higher price) is one of the most powerful triggers in advertising. The markdown makes the $65 feel like a deal. But does this work on agents?
+
+If it does, that's an exploitable strategy. If it doesn't, advertisers need to find what *does* influence agent logic. Maybe it's review sentiment analysis. Maybe it's return policy terms buried in structured data. Maybe it's response time from the merchant's API.
+
+The point is: we don't know yet. And as of writing this, I've not seen anyone running the experiments.
+
+WHAT'S AT STAKE
+
+The current advertising model assumes a human is on the other end. Someone who can be emotionally persuaded, who has brand loyalty, who responds to scarcity tactics. As agents take over more purchasing and recommending, that assumption breaks.
+
+Consider what happens if advertisers *don't* adapt: agents route around traditional ads entirely, making decisions based purely on specs, reviews, and price. Billions in ad spend becomes irrelevant overnight.
+
+Now consider what happens if they *do* adapt: a new arms race emerges between agents optimizing for user preferences and advertisers optimizing to influence agent behavior. The battleground shifts from human attention to algorithmic persuasion.
+
+The real question isn't whether AI will have ads. It's:
+
+> How do you influence agent purchasing and recommendation behavior across all possible engagement surfaces?
+
+Whoever figures this out first owns the next era of advertising.
+
+WHAT I'M EXPLORING
+
+I've been poking at this problem from a few angles:
+
+- **Structured data influence:** What happens when you change meta tags, schema markup, or API response formatting? Can you measurably shift agent behavior?
+- **Price anchoring experiments:** Do agents respond to markdown framing, urgency drivers, and other marketing psychology tactics the way humans do, or do they see through it?
+- **Agent discoverability tools:** I'm currently building tooling to measure how discoverable products and services are to AI agents - essentially "agent SEO" diagnostics.
+
+The experiments haven't been run. The playbook hasn't been written. That's what makes this interesting.
+
+*If you're thinking about this too, I'd love to hear from you!*`
+  },
+  {
     id: 'protoflow',
     title: 'Building ProtoFlow: Parallel Prototyping with Claude Code',
     date: 'February 10, 2026',
