@@ -32,6 +32,7 @@ export const fileSystem = {
         { id: 'probablynotsmart', name: 'probablynotsmart.ai', type: 'alias', url: 'https://probablynotsmart.ai' },
         { id: 'letsprotoflow', name: 'letsprotoflow.com', type: 'alias', url: 'https://letsprotoflow.com' },
         { id: 'productcasestudies', name: 'productcasestudies.com', type: 'alias', url: 'https://productcasestudies.com' },
+        { id: 'smarterdomainsearch', name: 'Smarter Domain Search', type: 'alias', url: 'https://smarterdomainsearch.com' },
       ]
     },
     'subscribe': {
