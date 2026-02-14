@@ -17,9 +17,9 @@ function updateUrlHash(postId) {
   }
 }
 
-// Copy current URL to clipboard
-function copyShareLink() {
-  const url = window.location.href;
+// Copy share URL to clipboard (uses /blog/post-id format for proper OG tags)
+function copyShareLink(postId) {
+  const url = `${window.location.origin}/blog/${postId}`;
   navigator.clipboard.writeText(url).then(() => {}).catch(() => {
     const textArea = document.createElement('textarea');
     textArea.value = url;
@@ -94,7 +94,7 @@ function PostView({ post, onBack }) {
   const [copied, setCopied] = useState(false);
 
   const handleShare = () => {
-    copyShareLink();
+    copyShareLink(post.id);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
