@@ -44,7 +44,7 @@ For humans, anchoring bias (showing the original higher price) is one of the mos
 
 If it does, that's an exploitable strategy. If it doesn't, advertisers need to find what *does* influence agent logic. Maybe it's review sentiment analysis. Maybe it's return policy terms buried in structured data. Maybe it's response time from the merchant's API.
 
-The point is: we don't know yet. And as of writing this, I've not seen anyone running the experiments.
+The point is we don't know yet. And as of writing this, I've not seen anyone running the experiments.
 
 WHAT'S AT STAKE
 

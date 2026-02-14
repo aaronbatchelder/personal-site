@@ -28,10 +28,11 @@
 }
 
 .blog-reader-list-header h2 {
-  font-family: var(--font-chicago);
-  font-size: 14px;
-  font-weight: bold;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
   margin: 0;
+  -webkit-font-smoothing: auto;
 }
 
 .blog-reader-posts {
@@ -42,9 +43,10 @@
 .blog-reader-empty {
   padding: 32px 20px;
   text-align: center;
-  font-family: var(--font-geneva);
-  font-size: 12px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
   color: var(--mac-gray-dark);
+  -webkit-font-smoothing: auto;
 }
 
 .blog-reader-post-item {
@@ -66,18 +68,20 @@
 }
 
 .blog-reader-post-item .blog-reader-post-title {
-  font-family: var(--font-chicago);
-  font-size: 12px;
-  font-weight: bold;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
   flex: 1;
   margin-right: 12px;
+  -webkit-font-smoothing: auto;
 }
 
 .blog-reader-post-item .blog-reader-post-date {
-  font-family: var(--font-geneva);
-  font-size: 10px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
   color: var(--mac-gray-dark);
   flex-shrink: 0;
+  -webkit-font-smoothing: auto;
 }
 
 .blog-reader-post-item.selected .blog-reader-post-date {
@@ -106,13 +110,14 @@
 }
 
 .blog-reader-back-btn {
-  font-family: var(--font-geneva);
-  font-size: 11px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
   color: var(--mac-gray-dark);
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
+  -webkit-font-smoothing: auto;
 }
 
 .blog-reader-back-btn:hover {
@@ -121,14 +126,16 @@
 }
 
 .blog-reader-share-btn {
-  font-family: var(--font-chicago);
-  font-size: 10px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
   padding: 4px 10px;
   background-color: var(--mac-white);
   border: 1px solid var(--mac-black);
   border-radius: 3px;
   cursor: pointer;
   transition: background-color 0.1s;
+  -webkit-font-smoothing: auto;
 }
 
 .blog-reader-share-btn:hover {
@@ -146,17 +153,19 @@
 }
 
 .blog-reader-post-title-large {
-  font-family: var(--font-chicago);
-  font-size: 16px;
-  font-weight: bold;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
   margin: 0;
   line-height: 1.3;
+  -webkit-font-smoothing: auto;
 }
 
 .blog-reader-post-date-large {
-  font-family: var(--font-geneva);
-  font-size: 11px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
   color: var(--mac-gray-dark);
+  -webkit-font-smoothing: auto;
 }
 
 /* ===== Post Content ===== */
@@ -165,11 +174,15 @@
   flex: 1;
   overflow-y: auto;
   padding: 24px 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-  font-size: 15px;
-  line-height: 1.7;
-  color: #1a1a1a;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #222222;
   max-width: 100%;
+  -webkit-font-smoothing: auto !important;
+  -moz-osx-font-smoothing: auto !important;
+  font-weight: 400;
+  letter-spacing: -0.011em;
 }
 
 /* Paragraphs - standard HTML from marked */
@@ -183,23 +196,25 @@
 
 /* Headers - standard HTML from marked */
 .blog-reader-post-content h1 {
-  font-family: var(--font-chicago);
-  font-size: 16px;
-  font-weight: bold;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
   margin: 28px 0 12px 0;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--mac-gray-light);
-  letter-spacing: 0.5px;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: auto;
 }
 
 .blog-reader-post-content h2 {
-  font-family: var(--font-chicago);
-  font-size: 14px;
-  font-weight: bold;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
   margin: 28px 0 12px 0;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--mac-gray-light);
-  letter-spacing: 0.5px;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: auto;
 }
 
 .blog-reader-post-content h1:first-child,
@@ -208,10 +223,11 @@
 }
 
 .blog-reader-post-content h3 {
-  font-family: var(--font-chicago);
-  font-size: 13px;
-  font-weight: bold;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
   margin: 20px 0 8px 0;
+  -webkit-font-smoothing: auto;
 }
 
 /* Lists - standard HTML from marked */
@@ -252,20 +268,22 @@
 }
 
 .blog-reader-h2 {
-  font-family: var(--font-chicago);
-  font-size: 14px;
-  font-weight: bold;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
   margin: 28px 0 12px 0;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--mac-gray-light);
-  letter-spacing: 0.5px;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: auto;
 }
 
 .blog-reader-h3 {
-  font-family: var(--font-chicago);
-  font-size: 13px;
-  font-weight: bold;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
   margin: 20px 0 8px 0;
+  -webkit-font-smoothing: auto;
 }
 
 .blog-reader-list {
