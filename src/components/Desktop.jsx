@@ -37,10 +37,26 @@ export function Desktop() {
   const [hasShownBio, setHasShownBio] = useState(false);
   const [hasHandledDeepLink, setHasHandledDeepLink] = useState(false);
 
-  // Handle deep links (e.g., #blog or #blog/post-id)
+  // Handle deep links (e.g., #blog or #blog/post-id) and sessionStorage redirects
   useEffect(() => {
     if (hasHandledDeepLink) return;
 
+    // Check for sessionStorage (from /blog/post-id redirect pages)
+    const storedPostId = sessionStorage.getItem('openBlogPost');
+    if (storedPostId) {
+      sessionStorage.removeItem('openBlogPost');
+      openWindow({
+        type: 'blog',
+        title: "Aaron's Blog",
+        size: { width: 650, height: 700 },
+        initialPostId: storedPostId,
+      });
+      setHasShownBio(true);
+      setHasHandledDeepLink(true);
+      return;
+    }
+
+    // Check for hash-based deep links
     const hash = window.location.hash;
     if (hash.startsWith('#blog')) {
       const postId = hash.replace('#blog/', '').replace('#blog', '') || null;

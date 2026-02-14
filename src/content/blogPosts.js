@@ -5,7 +5,10 @@ export const blogPosts = [
   {
     id: 'ad-buyer-of-the-future',
     title: 'The Ad Buyer of the Future Isn\'t Targeting You - It\'s Targeting Your Agent',
+    description: 'What happens when ad platforms start targeting your AI agent? As agents take on more shopping and recommending, advertisers will need to influence the software acting on your behalf.',
     date: 'February 13, 2026',
+    pubDate: '2026-02-13',
+    heroImage: '/og-images/ad-buyer-og.png',
     images: [],
     content: `Everyone's talking about OpenAI bringing ads into the chat experience. But there's a bigger question nobody's asking: what happens when ad platforms start targeting your *agent*?
 
@@ -75,7 +78,10 @@ The experiments haven't been run. The playbook hasn't been written. That's what 
   {
     id: 'protoflow',
     title: 'Building ProtoFlow: Parallel Prototyping with Claude Code',
+    description: 'Introducing ProtoFlow, a tool that spins up multiple Claude Code sessions in parallel to explore different directions for your prototype simultaneously.',
     date: 'February 10, 2026',
+    pubDate: '2026-02-10',
+    heroImage: '/og-images/protoflow-og.png',
     images: [
       { src: '/images/blog/protoflow.gif', alt: 'ProtoFlow demo showing parallel Claude Code sessions' },
       { src: '/images/blog/protoflow-side-by-side.png', alt: 'Two Claude Code sessions running side by side' },
@@ -151,7 +157,10 @@ If you have Claude Code installed, you can run it in minutes. I'd love to see wh
   {
     id: 'probably-not-smart-part',
     title: 'This is Probably Not Smart: I Gave 10 AI Agents $500 and a Landing Page',
+    description: '10 AI agents. $500 budget. Full control over a landing page, social media, and paid ads. No human oversight on decisions. An autonomous AI marketing experiment.',
     date: 'February 9, 2026',
+    pubDate: '2026-02-09',
+    heroImage: '/og-images/probably-not-smart-og.png',
     images: [
       { src: '/images/blog/pns-main-loop.png', alt: 'Main optimization loop showing agent interactions' },
       { src: '/images/blog/pns-run5-debate.png', alt: 'Run #5 showing the Gavin-Gilfoyle debate' },
