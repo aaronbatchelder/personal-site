@@ -181,6 +181,8 @@
   max-width: 100%;
   -webkit-font-smoothing: auto !important;
   -moz-osx-font-smoothing: auto !important;
+  user-select: text;
+  cursor: text;
   font-weight: 400;
   letter-spacing: -0.011em;
 }

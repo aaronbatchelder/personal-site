@@ -21,9 +21,55 @@ const blogPosts = eval(blogPostsMatch[1]);
 
 const SITE_URL = 'https://aaronbatchelder.com';
 
+// Convert markdown-like content to simple HTML for crawlers
+function contentToHTML(content) {
+  if (!content) return '';
+
+  let html = content
+    // Escape HTML entities
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    // Convert ALL CAPS lines to h2
+    .replace(/^([A-Z][A-Z0-9\s,.'?!()\-]+)$/gm, (match) => {
+      if (match.length > 3 && match === match.toUpperCase()) {
+        return `</p><h2>${match}</h2><p>`;
+      }
+      return match;
+    })
+    // Convert **bold** to <strong>
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    // Convert *italic* to <em>
+    .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+    // Convert [text](url) to links
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+    // Convert numbered lists
+    .replace(/^(\d+)\. (.+)$/gm, '<li>$2</li>')
+    // Convert bullet points
+    .replace(/^- (.+)$/gm, '<li>$1</li>')
+    // Convert blockquotes
+    .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
+    // Convert double newlines to paragraph breaks
+    .replace(/\n\n/g, '</p><p>')
+    // Convert single newlines to line breaks
+    .replace(/\n/g, '<br>');
+
+  // Wrap in paragraph tags
+  html = `<p>${html}</p>`;
+
+  // Clean up empty paragraphs
+  html = html.replace(/<p><\/p>/g, '').replace(/<p>\s*<\/p>/g, '');
+
+  // Remove [IMAGE] placeholders
+  html = html.replace(/\[IMAGE\]/g, '');
+
+  return html;
+}
+
 function generateBlogPageHTML(post) {
   const fullUrl = `${SITE_URL}/blog/${post.id}`;
   const imageUrl = `${SITE_URL}${post.heroImage}`;
+  const contentHTML = contentToHTML(post.content);
 
   return `<!doctype html>
 <html lang="en">
@@ -99,12 +145,28 @@ function generateBlogPageHTML(post) {
       // Redirect to main app
       window.location.replace('/');
     </script>
+    <style>
+      body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; max-width: 700px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #222; }
+      h1 { font-size: 24px; margin-bottom: 8px; }
+      h2 { font-size: 18px; margin-top: 32px; margin-bottom: 12px; border-bottom: 1px solid #ccc; padding-bottom: 6px; }
+      p { margin-bottom: 16px; }
+      a { color: #0066cc; }
+      blockquote { border-left: 3px solid #666; padding-left: 16px; margin: 16px 0; font-style: italic; }
+      .meta { color: #666; font-size: 14px; margin-bottom: 24px; }
+      article { display: block; }
+    </style>
   </head>
   <body>
-    <noscript>
-      <meta http-equiv="refresh" content="0;url=/" />
-      <p>Redirecting to <a href="/">Aaron Batchelder's site</a>...</p>
-    </noscript>
+    <article>
+      <header>
+        <h1>${post.title}</h1>
+        <p class="meta">By Aaron Batchelder &middot; ${post.date}</p>
+      </header>
+      ${contentHTML}
+      <footer>
+        <p><a href="/">Visit Aaron Batchelder's site</a> to read more.</p>
+      </footer>
+    </article>
   </body>
 </html>`;
 }
