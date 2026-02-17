@@ -144,7 +144,7 @@ WHAT'S NEXT
 
 Building ProtoFlow got me thinking. Parallel agents exploring independently is useful - but what happens when agents work together instead of side by side? What if they could debate, critique each other, and converge on decisions?
 
-That question led to [probablynotsmart.ai](https://probablynotsmart.ai) - an autonomous AI marketing experiment. Ten AI agents with $500, full control of a landing page, ad spend, and social media. No human oversight. One agent analyzes, another proposes changes, another tears the proposal apart, another makes the final call. Every decision is documented publicly.
+That question led to [probablynotsmart.ai](https://probablynotsmart.ai) - an autonomous AI marketing experiment. Ten AI agents, full control of a landing page and social media, no human oversight. One agent analyzes, another proposes changes, another tears the proposal apart, another makes the final call. Every decision is documented publicly.
 
 ProtoFlow is divergent: explore many directions. Probablynotsmart is convergent: agents argue until they reach a decision, then execute. Two different slices of multi-agent work.
 
@@ -156,8 +156,8 @@ If you have Claude Code installed, you can run it in minutes. I'd love to see wh
   },
   {
     id: 'probably-not-smart-part',
-    title: 'This is Probably Not Smart: I Gave 10 AI Agents $500 and a Landing Page',
-    description: '10 AI agents. $500 budget. Full control over a landing page, social media, and paid ads. No human oversight on decisions. An autonomous AI marketing experiment.',
+    title: 'This is Probably Not Smart: I Gave 10 AI Agents a Landing Page and Asked Them to Maximize Conversion',
+    description: 'An autonomous AI marketing experiment. 10 AI agents. Full control over a landing page and social media. No human oversight on decisions. Rejected by every ad platform.',
     date: 'February 9, 2026',
     pubDate: '2026-02-09',
     heroImage: '/og-images/probably-not-smart-part.png',
@@ -175,7 +175,7 @@ Would it go off the rails? Would it jeopardize a brand? Would the page get rebui
 
 So I built it myself.
 
-**Probably Not Smart** is an autonomous AI marketing experiment. 10 AI agents. $500 budget. Full control over a landing page, social media, and paid ads. No human oversight on decisions.
+**Probably Not Smart** is an autonomous AI marketing experiment with one goal: maximize conversion. 10 AI agents. Full control over a landing page, social media (X/Moltbook), and growth experimentation. No human oversight on decisions. Every decision documented publicly.
 
 I don't know if this is a good idea. I have hesitations. But I wanted to see what happens.
 
@@ -228,7 +228,7 @@ MEET THE TEAM
 - **Dinesh**: Mission Alignment. Scores whether the proposed changes actually align with our goal or if we're drifting into "scammy" territory.
 - **Laurie Bream**: The Decision Maker. Grounded, rational, final. She approves, rejects, or holds based on the full context.
 - **Richard**: The Narrator. Writes the blog posts documenting every run, every debate, every disaster. Brings nervous, slightly annoyed energy and the exhausted documentation of someone who just wants the system to work.
-- **Russ Hanneman**: Growth Hacker. Three commas energy. Handles [Twitter engagement](https://x.com/probablynotsmrt), finds conversations to join, drafts posts, follows accounts. We recently had to tune him to NOT include the website link in every post because it looked desperate.
+- **Russ Hanneman**: Growth Hacker. Three commas energy. Handles [Twitter engagement](https://x.com/probablynotsmrt), finds conversations to join, drafts posts, follows accounts. I recently had to tune him to NOT include the website link in every post because it looked desperate.
 - **Jin Yang**: [Moltbook Community Manager](https://www.moltbook.com/u/JinYang2). Moltbook is a social network for AI agents (yes, that's a thing now). Jin Yang represents us in the agent community with sarcastic confidence. He's currently suspended at the time of writing this (LOL).
 - **Erlich Bachman**: Content Quality Gate. And here's the thing about Erlich...
 
@@ -307,9 +307,23 @@ The Twitter account [@probablynotsmrt](https://twitter.com/probablynotsmrt) is l
 
 Everything is documented. Every decision, every debate, every terrible idea is public.
 
+REJECTED BY AD PLATFORMS
+
+Here's where the experiment took an unexpected turn: every major ad platform rejected us.
+
+Google Ads, Meta, X - all of them. The reasons varied, but the pattern was clear: they didn't know what to do with an autonomous AI running marketing campaigns with no human approval loop.
+
+At first, this felt like a setback. Originally, I was most interested in giving agents control over paid acquisition to see if they could and how they would optimize ad spend and campaign iteration. Without ads, how would the agents get traffic?
+
+Being an optimist, I looked at getting rejected by every ad platform as actually more interesting than running ads would have been.
+
+It forced a pivot. Instead of buying attention, I wanted to find a way for the agents to earn it. I built an Agent Referral Network - other AI agents can subscribe via API and get webhook updates when it runs optimization cycles. Agents referring other agents. The network effect I wanted, just in a different form.
+
+I also opened a "Buy Me a Coffee" model to cover API costs. No revenue goals. Just an experiment running in public.
+
 WHAT'S NEXT
 
-This is **Part 1**, the setup. The experiment is now running autonomously. However, as of this writing I'm seriously struggling with getting API approval for any ad network. More to come on that.
+This is **Part 1**, the setup. The experiment is now running autonomously.
 
 In **Part 2**, I'll go deeper on the implementation: how the agent orchestration actually works, the bugs we hit (timezone issues breaking blog dates, markdown rendering disasters, rate limits), and what it's like building with Claude Code as a pair programmer for two weeks straight.
 
