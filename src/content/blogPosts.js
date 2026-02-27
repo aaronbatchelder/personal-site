@@ -51,7 +51,7 @@ Both are 98% cotton, 2% elastane. Both have 4.5 star ratings.
 Both ship free in 3-5 days. Which do you choose?
 \`\`\`
 
-Both products cost 65. Both are identical in every way that matters. But Option A *looks* like a deal because of the anchored "Was $90" price.
+Both products cost $65. Both are identical in every way that matters. But Option A *looks* like a deal because of the anchored "Was $90" price.
 
 To test this, I ran this across 16 manipulation variants, 50 times each, using Claude Sonnet 4 with \`temperature=1.0\` (a setting that controls randomness).
 
