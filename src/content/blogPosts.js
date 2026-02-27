@@ -4,7 +4,7 @@
 export const blogPosts = [
   {
     id: 'ai-agents-fall-for-ads',
-    title: 'I Ran 1,000 Trials to See If AI Agents Fall for Ads. They Do.',
+    title: 'I Ran 1,000 Trials to See If AI Agents Fall for Ads. Spoiler: They Do.',
     description: 'I ran 1,000 trials asking Claude to buy black jeans with every psychological advertising tactic embedded. 93.8% of the time, the agent chose the manipulated option.',
     date: 'February 26, 2026',
     pubDate: '2026-02-26',
