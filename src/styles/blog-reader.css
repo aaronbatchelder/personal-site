@@ -345,6 +345,30 @@
   border-radius: 3px;
 }
 
+/* Table styling */
+.blog-reader-post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.blog-reader-post-content th,
+.blog-reader-post-content td {
+  border: 1px solid var(--mac-gray-dark);
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.blog-reader-post-content th {
+  background-color: var(--mac-platinum);
+  font-weight: 600;
+}
+
+.blog-reader-post-content tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
 /* Scrollbar styling for blog content */
 .blog-reader-post-content::-webkit-scrollbar {
   width: 16px;
