@@ -176,6 +176,29 @@ export const SnakeIcon = () => (
   </svg>
 );
 
+export const ChipQuestIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Tiled floor */}
+    <rect x="3" y="3" width="26" height="26" fill="#F1F1F1" stroke="#000" strokeWidth="1"/>
+    <line x1="3" y1="12" x2="29" y2="12" stroke="#DCDCDC" strokeWidth="1"/>
+    <line x1="3" y1="20" x2="29" y2="20" stroke="#DCDCDC" strokeWidth="1"/>
+    <line x1="12" y1="3" x2="12" y2="29" stroke="#DCDCDC" strokeWidth="1"/>
+    <line x1="20" y1="3" x2="20" y2="29" stroke="#DCDCDC" strokeWidth="1"/>
+    {/* Walls */}
+    <rect x="20" y="3" width="9" height="9" fill="#9C9C9C" stroke="#4F4F4F" strokeWidth="1"/>
+    <rect x="3" y="20" width="9" height="9" fill="#9C9C9C" stroke="#4F4F4F" strokeWidth="1"/>
+    {/* Computer chip collectible */}
+    <rect x="22" y="22" width="5" height="5" fill="#2F7D64" stroke="#123C31" strokeWidth="1"/>
+    <line x1="22" y1="21" x2="22" y2="20" stroke="#123C31" strokeWidth="1"/>
+    <line x1="26" y1="21" x2="26" y2="20" stroke="#123C31" strokeWidth="1"/>
+    {/* Player */}
+    <circle cx="16" cy="12" r="3" fill="#F0D3A8" stroke="#20304F" strokeWidth="1"/>
+    <rect x="13" y="15" width="6" height="6" fill="#20304F"/>
+    <rect x="13" y="21" width="2" height="2" fill="#20304F"/>
+    <rect x="17" y="21" width="2" height="2" fill="#20304F"/>
+  </svg>
+);
+
 // Project-specific icons
 
 // Probably Not Smart - AI brain icon

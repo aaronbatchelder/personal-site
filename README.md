@@ -37,6 +37,8 @@ The whole thing took about 6 hours of collaborative work.
 ### Games
 - **Brick Breaker** - Fully playable Breakout clone with lives, scoring, and level progression
 - **Minesweeper** - Classic mine-sweeping action
+- **Snake** - Eat, grow, don't hit the walls
+- **Chip Quest** - Six-level tile puzzler in the spirit of Chip's Challenge, with keys, boots, ice, force floors, pushable blocks, and monsters
 
 ### Blog (HyperCard Stack)
 - **Card-based navigation** - Inspired by Apple's revolutionary HyperCard (1987)
