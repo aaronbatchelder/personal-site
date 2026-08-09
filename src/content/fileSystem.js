@@ -49,8 +49,10 @@ export const fileSystem = {
         { id: 'brick-breaker', name: 'Brick Breaker', type: 'game' },
         { id: 'minesweeper', name: 'Minesweeper', type: 'minesweeper' },
         { id: 'snake', name: 'Snake', type: 'snake' },
+        { id: 'chip-quest', name: 'Chip Quest', type: 'chipquest' },
         { id: 'high-scores', name: 'High Scores', type: 'document', content: 'highScores' },
         { id: 'game-readme', name: 'Read Me', type: 'document', content: 'gameReadme' },
+        { id: 'chip-quest-readme', name: 'Chip Quest Help', type: 'document', content: 'chipQuestReadme' },
       ]
     },
     'macintosh-hd': {
@@ -222,6 +224,49 @@ SCORING
 
 LIVES
 You start with 3 lives. Lose a life when the ball falls below the paddle.
+
+Good luck!`
+    },
+
+    chipQuestReadme: {
+      title: 'Chip Quest Help',
+      content: `CHIP QUEST
+
+A tile puzzler in the spirit of the old
+Chip's Challenge.
+
+THE GOAL
+Collect every computer chip on the level,
+step on the chip socket to unlock it, then
+walk into the exit before time runs out.
+
+CONTROLS
+• Arrow Keys or WASD: Move
+• Spacebar: Start / Pause
+• R: Restart the level
+
+WHAT'S ON THE FLOOR
+• Chips - collect them all
+• Socket - opens once you have every chip
+• Water - deadly without flippers
+• Fire - deadly without fire boots
+• Ice - you slide until something stops you
+• Force floors - they shove you along
+• Blocks - push them; drop one in water
+  to build a bridge
+• Keys and doors - a key opens any door
+  of its color, then it is used up
+• Hint tiles - stand on one and read the
+  panel on the right
+
+WATCH OUT FOR
+• Bugs walk along walls
+• Balls bounce back and forth
+Touching either one ends the run.
+
+There are six levels. Beating one unlocks
+the next, and your progress is remembered
+in this browser.
 
 Good luck!`
     }

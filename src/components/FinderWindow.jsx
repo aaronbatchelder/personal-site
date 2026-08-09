@@ -1,5 +1,5 @@
 import { Window } from './Window';
-import { FolderIcon, DocumentIcon, PictureIcon, AliasIcon, GameIcon, SubscribeIcon, MinesweeperIcon, SnakeIcon, ProbablyNotSmartIcon, ProtoflowIcon, ProductCaseStudiesIcon } from './Icons';
+import { FolderIcon, DocumentIcon, PictureIcon, AliasIcon, GameIcon, SubscribeIcon, MinesweeperIcon, SnakeIcon, ChipQuestIcon, ProbablyNotSmartIcon, ProtoflowIcon, ProductCaseStudiesIcon } from './Icons';
 
 function FinderItem({ item, isSelected, onClick, onDoubleClick }) {
   const getIcon = () => {
@@ -24,6 +24,8 @@ function FinderItem({ item, isSelected, onClick, onDoubleClick }) {
         return <MinesweeperIcon />;
       case 'snake':
         return <SnakeIcon />;
+      case 'chipquest':
+        return <ChipQuestIcon />;
       case 'form':
         return <SubscribeIcon />;
       default:

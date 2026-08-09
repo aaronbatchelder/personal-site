@@ -227,3 +227,186 @@
   font-size: 14px;
   font-weight: bold;
 }
+
+/* ===== Chip Quest Styles ===== */
+
+.chipquest-window .window-content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mac-platinum);
+  overflow: hidden;
+}
+
+.chipquest-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chipquest-level-name {
+  font-family: var(--font-chicago);
+  font-size: 12px;
+  color: var(--mac-gray-dark);
+}
+
+.chipquest-body {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  min-height: 0;
+}
+
+.chipquest-stage {
+  position: relative;
+  flex: 0 0 auto;
+  align-self: flex-start;
+}
+
+.chipquest-canvas {
+  display: block;
+  border: 2px solid var(--mac-black);
+  background-color: var(--mac-white);
+  image-rendering: auto;
+}
+
+.chipquest-overlay {
+  gap: 10px;
+  padding: 12px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.chipquest-overlay .game-overlay-text {
+  font-size: 20px;
+}
+
+.chipquest-overlay .game-overlay-subtext {
+  font-size: 12px;
+  max-width: 250px;
+}
+
+.chipquest-overlay-detail {
+  font-size: 10px;
+  color: var(--mac-gray-light);
+}
+
+.chipquest-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chipquest-picker-label {
+  font-family: var(--font-chicago);
+  font-size: 11px;
+  color: var(--mac-white);
+}
+
+.chipquest-picker-button {
+  font-family: var(--font-chicago);
+  font-size: 11px;
+  width: 22px;
+  height: 20px;
+  padding: 0;
+  background-color: var(--mac-white);
+  border: 1px solid var(--mac-black);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.chipquest-picker-button:disabled {
+  color: var(--mac-gray-mid);
+  cursor: default;
+}
+
+.chipquest-panel {
+  flex: 1;
+  min-width: 104px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px;
+  background-color: var(--mac-gray-light);
+  border: 2px inset var(--mac-white);
+  overflow: hidden;
+}
+
+.chipquest-panel-title {
+  font-family: var(--font-chicago);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--mac-gray-dark);
+  border-bottom: 1px solid var(--mac-gray-mid);
+  padding-bottom: 2px;
+}
+
+.chipquest-slots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.chipquest-slot {
+  position: relative;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--mac-platinum);
+  border: 1px inset var(--mac-white);
+  opacity: 0.35;
+}
+
+.chipquest-slot.has {
+  opacity: 1;
+  background-color: var(--mac-white);
+}
+
+.chipquest-key-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--mac-black);
+}
+
+.chipquest-boot-mark {
+  width: 10px;
+  height: 8px;
+  border: 1px solid var(--mac-gray-dark);
+  border-radius: 2px 2px 4px 2px;
+}
+
+.chipquest-slot-count {
+  position: absolute;
+  right: 1px;
+  bottom: 0;
+  font-family: var(--font-geneva);
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.chipquest-hint {
+  flex: 1;
+  font-family: var(--font-geneva);
+  font-size: 10px;
+  line-height: 1.35;
+  color: var(--mac-black);
+  overflow-y: auto;
+}
+
+.chipquest-restart {
+  font-family: var(--font-chicago);
+  font-size: 10px;
+  padding: 4px;
+  background-color: var(--mac-white);
+  border: 1px solid var(--mac-black);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chipquest-restart:active {
+  background-color: var(--mac-gray-light);
+}

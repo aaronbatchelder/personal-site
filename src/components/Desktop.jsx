@@ -8,6 +8,7 @@ import { SubscribeWindow } from './SubscribeWindow';
 import { GameWindow } from './game/GameWindow';
 import { MinesweeperWindow } from './game/MinesweeperWindow';
 import { SnakeWindow } from './game/SnakeWindow';
+import { ChipQuestWindow } from './game/ChipQuestWindow';
 import { ContactWindow } from './ContactWindow';
 import { BlogReaderWindow } from './BlogReaderWindow';
 import { AboutMeWindow } from './AboutMeWindow';
@@ -81,6 +82,7 @@ export function Desktop() {
     if (activeWindow?.type === 'game') return 'Brick Breaker';
     if (activeWindow?.type === 'minesweeper') return 'Minesweeper';
     if (activeWindow?.type === 'snake') return 'Snake';
+    if (activeWindow?.type === 'chipquest') return 'Chip Quest';
     if (activeWindow?.type === 'contact') return 'Mail';
     if (activeWindow?.type === 'simpletext') return 'SimpleText';
     if (activeWindow?.type === 'blog') return 'Blog Reader';
@@ -217,6 +219,14 @@ export function Desktop() {
         });
         break;
 
+      case 'chipquest':
+        openWindow({
+          type: 'chipquest',
+          title: 'Chip Quest',
+          size: { width: 448, height: 368 },
+        });
+        break;
+
       default:
         console.log('Unknown item type:', item.type);
     }
@@ -322,6 +332,14 @@ export function Desktop() {
       case 'snake':
         return (
           <SnakeWindow
+            key={win.id}
+            windowProps={windowProps}
+          />
+        );
+
+      case 'chipquest':
+        return (
+          <ChipQuestWindow
             key={win.id}
             windowProps={windowProps}
           />
