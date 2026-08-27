@@ -16,6 +16,14 @@ This is Aaron's personal website, built as a nostalgic Classic Mac OS System 7 d
 - LinkedIn: linkedin.com/in/aaronbatchelder
 - GitHub: github.com/aaronbatchelder
 
+## Writing
+
+- [What 120 Days on an AI-Native Team Taught Me About Product](/blog/120-days-in) - Ten learnings from four months as CPO on an AI-native team: the collapsing PDLC, proto-shipping, and why product and design capacity needs to go up, not down.
+- [I Ran 1,000 Trials to See If AI Agents Fall for Ads. Spoiler: They Do.](/blog/ai-agents-fall-for-ads) - 93.8% of the time, the agent chose the manipulated option.
+- [The Ad Buyer of the Future Isn't Targeting You - It's Targeting Your Agent](/blog/ad-buyer-of-the-future) - What happens when ad platforms start targeting your AI agent.
+- [Building ProtoFlow: Parallel Prototyping with Claude Code](/blog/protoflow) - A tool that spins up multiple Claude Code sessions in parallel.
+- [This is Probably Not Smart: I Gave 10 AI Agents a Landing Page](/blog/probably-not-smart-part) - An autonomous AI marketing experiment with no human oversight.
+
 ## Links
 
 - [Full LLM Context](/llms-full.txt)

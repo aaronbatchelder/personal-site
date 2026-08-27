@@ -3,6 +3,119 @@
 
 export const blogPosts = [
   {
+    id: '120-days-in',
+    title: 'What 120 Days on an AI-Native Team Taught Me About Product',
+    description: 'Four months ago I joined Becoming You Labs as CPO on a truly AI-native team. Ten learnings on the collapsing PDLC, proto-shipping, and why product and design capacity needs to go up, not down.',
+    date: 'August 26, 2026',
+    pubDate: '2026-08-26',
+    heroImage: '/og-images/120-days-in.png',
+    images: [
+      { src: '/images/blog/120-days-in/cover.png', alt: 'Cover card: What 120 days on an AI-native team taught me about product' },
+      { src: '/images/blog/120-days-in/card-01.png', alt: 'Card 1: The IC PM job got smaller and more important at the same time' },
+      { src: '/images/blog/120-days-in/card-02.png', alt: 'Card 2: Building on an AI-native team is really, really fun' },
+      { src: '/images/blog/120-days-in/card-03.png', alt: 'Card 3: Figma-first, pixel-first design is going to die' },
+      { src: '/images/blog/120-days-in/card-04.png', alt: 'Card 4: Proto-shipping, prototyping that ships' },
+      { src: '/images/blog/120-days-in/card-05.png', alt: 'Card 5: The PDLC has collapsed in on itself' },
+      { src: '/images/blog/120-days-in/card-06.png', alt: 'Card 6: Engineering now pushes back on me for cutting scope' },
+      { src: '/images/blog/120-days-in/card-07.png', alt: 'Card 7: I ship code daily, sometimes several times a day' },
+      { src: '/images/blog/120-days-in/card-08.png', alt: 'Card 8: Stakeholder review is an agent loop' },
+      { src: '/images/blog/120-days-in/card-09.png', alt: 'Card 9: I am not worried about AI taking product and design jobs' },
+      { src: '/images/blog/120-days-in/card-10.png', alt: 'Card 10: Why the AI labs go on hiring sprees for PMs and designers' },
+      { src: '/images/blog/120-days-in/close.png', alt: 'Closing card: Four months in' },
+    ],
+    content: `A bit less than 4 months ago I joined [Becoming You Labs](https://becomingyoulabs.com) as our CPO, stepping into a new hybrid role of product leader and IC PM on a truly AI-native team. We've integrated AI tooling from the ground-up in the way we work and build products. And like many, it's challenged assumptions and previously held beliefs about how software is built and the role of product.
+
+Here's what I've learned so far, and a few hot takes, from working on an AI-native team.
+
+THE IC PM JOB GOT SMALLER AND MORE IMPORTANT AT THE SAME TIME
+
+If you strip away the "busy work" the role accumulated over the years and hand it to AI, what's left is still one of the most important jobs on the team: deciding what gets built, why, and for whom. While the ground is shifting under product teams, that part hasn't moved.
+
+BUILDING ON AN AI-NATIVE TEAM IS REALLY, REALLY FUN
+
+This isn't a deep insight, but man, building on an AI-native team is REALLY fun. I feel completely unleashed in the best way possible. With every discipline either shipping or being able to ship PRs, I'm seeing a whole new level of shared ownership and engagement and it's a beautiful thing.
+
+FIGMA-FIRST, PIXEL-FIRST DESIGN IS GOING TO DIE
+
+Or at least it will look radically different over the next few years. For an AI-native team, starting in Figma is FAR too slow to keep pace with engineering, and far too expensive for what small teams get out of it. Someone is building the Figma of the agent era right now and it'll take off in the next 12 to 24 months.
+
+WE SKIP FIGMA ENTIRELY, AND CALL WHAT REPLACED IT PROTO-SHIPPING
+
+Speaking of Figma-first design dying, we skip it. We've documented our design system in our monorepo so agents can navigate and use it as a base when creating new experiences. This has unlocked product and design prototyping directly on a branch in the real repo. We put it in front of customers and stakeholders, iterate live, and engineering picks up something already close to shippable.
+
+I've been calling it **proto-shipping**: prototyping that ships.
+
+THE PDLC HAS COLLAPSED IN ON ITSELF
+
+We have 6 engineers working at the pace of 20 to 25. I've never seen anything like it. We've found all of that pressure moves upstream to product and design, and it forced me to honestly revisit where a PM actually adds value when building is no longer the slow or expensive part.
+
+Anyone claiming they know exactly how to run the PDLC in this new world is truly full of it. I'm working with veteran designers and engineers and while we're certainly effectively finding our way, there's no clear playbook at the moment, only recommendations on what others have tried.
+
+Traditional discovery appears to be shifting to ship and learn. Instead of static frames or clickable prototypes in Figma, we take a working prototype and either get it in front of customers during exploration or use our judgment, ship, and measure. Buffers between product/design and engineering are overrated anyway.
+
+ENGINEERING NOW PUSHES BACK ON ME FOR CUTTING SCOPE
+
+In an unexpected turn, engineering now pushes back on me for cutting scope, not the other way around. Since build cost and time have dropped so much, MLP commonly wins out over MVP. But knowing where to draw the line is trickier than it's ever been. The fundamentals haven't changed (what do we want to learn, why are we shipping this), it's just that there's less of a "we can't do that on that timeline" these days.
+
+I SHIP CODE DAILY, SOMETIMES SEVERAL TIMES A DAY
+
+I can describe a growth experiment to Claude, it stands up a preview link, I iterate until it's right, and then it uses PostHog's MCP to set up the experiment, review criteria, and feature flag. Or I might stand up a new marketing page or explore a new product direction. Most of the time all I need from engineering is a PR review.
+
+Companies that adopt this are going to run experiments at a volume they've never come close to in the past with traditional workflows.
+
+STAKEHOLDER REVIEW IS AN AGENT LOOP
+
+I built a skill called Design Loop for our Founder and CMO: it hands them a Vercel preview on Slack, checks for comments every 15 minutes, and either asks a clarifying question or makes the changes they request so they see it live. What started as a way for our CMO to see updates after hours is now the frontline of how most new experiences are reviewed by the internal team before they go live.
+
+I'M NOT WORRIED ABOUT AI TAKING PRODUCT AND DESIGN JOBS
+
+At least not at this point. For the last 4 months I've been the solo product leader for what felt like 20+ engineers. In that time we shipped 2 new marketing sites, 2 robust platforms from scratch, and a complete redesign of our existing products, while defining the direction for 5+ more.
+
+To keep pace, I often run 3-5 (or more) agents at a time, with a chief of staff agent coordinating them and loops managing my inbox, handling customer support, monitoring performance, and turning what's in my head into action. I squeeze every token I can out of it. And it's still not enough.
+
+It's a multiplier, not a replacement, for now.
+
+I FINALLY UNDERSTAND WHY THE AI LABS GO ON HIRING SPREES FOR PMS AND DESIGNERS
+
+I didn't get it until about 45 days ago. The proto-shipping cycle is surreal: what we explore as a prototype flows into production, so engineering releases faster, which puts even more pressure on product and design to figure out what's next.
+
+The velocity gap doesn't close. It raises the ceiling on both sides. You need more product and design capacity, not less, to keep pace with engineering.
+
+FOUR MONTHS IN
+
+To some extent I feel like I've unlearned as much as I've learned. I don't know exactly where this goes, but I know I'm never going back to the old way of building.
+
+If any of this resonated, I'd love to compare notes.
+
+THE CARD DECK
+
+I put these ten learnings into a set of cards, included below if you'd rather skim them that way.
+
+[IMAGE]
+
+[IMAGE]
+
+[IMAGE]
+
+[IMAGE]
+
+[IMAGE]
+
+[IMAGE]
+
+[IMAGE]
+
+[IMAGE]
+
+[IMAGE]
+
+[IMAGE]
+
+[IMAGE]
+
+[IMAGE]`
+  },
+  {
     id: 'ai-agents-fall-for-ads',
     title: 'I Ran 1,000 Trials to See If AI Agents Fall for Ads. Spoiler: They Do.',
     description: 'I ran 1,000 trials asking Claude to buy black jeans with every psychological advertising tactic embedded. 93.8% of the time, the agent chose the manipulated option.',

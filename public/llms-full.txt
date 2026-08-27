@@ -69,6 +69,35 @@ Leading teams across:
 - Focus on turning ambiguity into clear direction
 - Emphasis on shipping high-quality work that matters
 
+## Writing
+
+Aaron writes about AI-native product development, agent behavior, and building with LLMs.
+
+### What 120 Days on an AI-Native Team Taught Me About Product (August 26, 2026)
+URL: https://aaronbatchelder.com/blog/120-days-in
+
+Ten learnings from four months as CPO at Becoming You Labs, a truly AI-native team. Key themes: the IC PM job got smaller and more important at the same time; Figma-first design is dying; "proto-shipping" (prototyping directly on a branch in the real repo, using a design system documented for agents, so prototypes flow into production); the PDLC collapsing with 6 engineers working at the pace of 20-25; engineering pushing back on scope cuts rather than the reverse; stakeholder review as an agent loop; and why the velocity gap means you need more product and design capacity, not less.
+
+### I Ran 1,000 Trials to See If AI Agents Fall for Ads. Spoiler: They Do. (February 26, 2026)
+URL: https://aaronbatchelder.com/blog/ai-agents-fall-for-ads
+
+An experiment running ~1,000 trials asking Claude to buy black jeans with psychological advertising tactics embedded. 93.8% of the time the agent chose the manipulated option. Notably, low stock warnings backfired completely — the agent avoided them in 100% of trials.
+
+### The Ad Buyer of the Future Isn't Targeting You - It's Targeting Your Agent (February 13, 2026)
+URL: https://aaronbatchelder.com/blog/ad-buyer-of-the-future
+
+What happens when ad platforms start targeting AI agents rather than humans, and the surfaces advertisers will use to reach software acting on a person's behalf.
+
+### Building ProtoFlow: Parallel Prototyping with Claude Code (February 10, 2026)
+URL: https://aaronbatchelder.com/blog/protoflow
+
+Introducing ProtoFlow, a tool that spins up multiple Claude Code sessions in parallel to explore different prototype directions simultaneously.
+
+### This is Probably Not Smart: I Gave 10 AI Agents a Landing Page and Asked Them to Maximize Conversion (February 9, 2026)
+URL: https://aaronbatchelder.com/blog/probably-not-smart-part
+
+An autonomous AI marketing experiment: 10 agents with full control over a landing page and social media, no human oversight on decisions.
+
 ## Source Code
 
 The full source code and original product spec are available on GitHub:
